@@ -120,49 +120,49 @@
         <div class="grid-jugadores">
 
             <div class="tarjeta-jugador">
-                <img src="imagenes/jugador12.jpg" alt="Emanuel Trejo">
+                <img src="imagenes/jugador12.png" alt="Emanuel Trejo">
                 <p class="nombre">Emanuel Trejo</p>
                 <p class="datos">Posición: Pivote | Edad: 29 años</p>
             </div>
 
             <div class="tarjeta-jugador">
-                <img src="imagenes/jugador13.jpg" alt="Jeremías Denis">
+                <img src="imagenes/jugador13.png" alt="Jeremías Denis">
                 <p class="nombre">Jeremías Denis</p>
                 <p class="datos">Posición: Pivote | Edad: 25 años</p>
             </div>
 
             <div class="tarjeta-jugador">
-                <img src="imagenes/jugador14.jpg" alt="Gonzalo Atardo">
+                <img src="imagenes/jugador14.png" alt="Gonzalo Atardo">
                 <p class="nombre">Gonzalo Atardo</p>
                 <p class="datos">Posición: Pivote | Edad: 25 años</p>
             </div>
 
             <div class="tarjeta-jugador">
-                <img src="imagenes/jugador15.jpg" alt="Mauricio Cantero">
+                <img src="imagenes/jugador15.png" alt="Mauricio Cantero">
                 <p class="nombre">Mauricio Cantero</p>
                 <p class="datos">Posición: Mediocentro | Edad: 23 años</p>
             </div>
 
             <div class="tarjeta-jugador">
-                <img src="imagenes/jugador16.jpg" alt="Fernando Ortiz">
+                <img src="imagenes/jugador16.png" alt="Fernando Ortiz">
                 <p class="nombre">Fernando Ortiz</p>
                 <p class="datos">Posición: Mediocentro ofensivo | Edad: 28 años</p>
             </div>
 
             <div class="tarjeta-jugador">
-                <img src="imagenes/jugador17.jpg" alt="Alan Ortíz">
+                <img src="imagenes/jugador17.png" alt="Alan Ortíz">
                 <p class="nombre">Alan Ortíz</p>
                 <p class="datos">Posición: Mediocentro ofensivo | Edad: 27 años</p>
             </div>
 
             <div class="tarjeta-jugador">
-                <img src="jugador18.jpg" alt="Román Digión">
+                <img src="jugador18.png" alt="Román Digión">
                 <p class="nombre">Román Digión</p>
                 <p class="datos">Posición: Mediocentro ofensivo | Edad: 24 años</p>
             </div>
 
             <div class="tarjeta-jugador">
-                <img src="jugador19.jpg" alt="Alejandro Benítez">
+                <img src="jugador19.png" alt="Alejandro Benítez">
                 <p class="nombre">Alejandro Benítez</p>
                 <p class="datos">Posición: Mediocentro ofensivo | Edad: 30 años</p>
             </div>
@@ -174,43 +174,43 @@
         <div class="grid-jugadores">
 
             <div class="tarjeta-jugador">
-                <img src="jugador20.jpg" alt="Alan Visco">
+                <img src="jugador20.png" alt="Alan Visco">
                 <p class="nombre">Alan Visco</p>
                 <p class="datos">Posición: Extremo derecho | Edad: 29 años</p>
             </div>
 
             <div class="tarjeta-jugador">
-                <img src="jugador21.jpg" alt="Nicolás Vivas">
+                <img src="jugador21.png" alt="Nicolás Vivas">
                 <p class="nombre">Nicolás Vivas</p>
                 <p class="datos">Posición: Extremo derecho | Edad: 26 años</p>
             </div>
 
             <div class="tarjeta-jugador">
-                <img src="jugador22.jpg" alt="Jonathan Morán">
+                <img src="jugador22.png" alt="Jonathan Morán">
                 <p class="nombre">Jonathan Morán</p>
                 <p class="datos">Posición: Delantero centro | Edad: 37 años</p>
             </div>
 
             <div class="tarjeta-jugador">
-                <img src="jugador23.jpg" alt="Lucas Rebecchi">
+                <img src="jugador23.png" alt="Lucas Rebecchi">
                 <p class="nombre">Lucas Rebecchi</p>
                 <p class="datos">Posición: Delantero centro | Edad: 25 años</p>
             </div>
 
             <div class="tarjeta-jugador">
-                <img src="jugador24.jpg" alt="David Bramajo">
+                <img src="jugador24.png" alt="David Bramajo">
                 <p class="nombre">David Bramajo</p>
                 <p class="datos">Posición: Delantero centro | Edad: 21 años</p>
             </div>
 
             <div class="tarjeta-jugador">
-                <img src="jugador25.jpg" alt="Diego Vega">
+                <img src="jugador25.png" alt="Diego Vega">
                 <p class="nombre">Diego Vega</p>
                 <p class="datos">Posición: Delantero centro | Edad: 22 años</p>
             </div>
 
             <div class="tarjeta-jugador">
-                <img src="jugador26.jpg" alt="Franco Romero">
+                <img src="jugador26.png" alt="Franco Romero">
                 <p class="nombre">Franco Romero</p>
                 <p class="datos">Posición: Delantero centro | Edad: 24 años</p>
             </div>
