@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Jugadores</title>
 
     <style>
         body {
@@ -395,7 +395,7 @@
 
         <img src="imagenes/sponsor2.png" alt="Sponsor 2">
        
-	 <img src="imagenes/sponsor3.png" alt="Sponsor 3">
+		<img src="imagenes/sponsor3.png" alt="Sponsor 3">
 
         <img src="imagenes/sponsor4.png" alt="Sponsor 4">
 
