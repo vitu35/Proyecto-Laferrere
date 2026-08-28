@@ -1,0 +1,167 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background-color: #f4f4f4;
+}
+
+.header {
+    background-color: #05d66df8;
+    color: white;
+    height: 35px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    transition: height 0.4s ease;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.header:hover {
+    height: 100px;
+}
+
+.escudo-contenedor {
+    width: 90px;
+    height: 80px;
+   
+    border-radius: 6px;
+    float: left;
+    margin-right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.header:hover .escudo-contenedor {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.escudo-contenedor img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+
+.header p {
+    margin: 25px 0 0 0;
+    float: left;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(-15px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.header:hover p {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.header-menu {
+    float: right;
+    margin-top: 25px;
+    opacity: 0;
+    transform: translateY(-15px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.header:hover .header-menu {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.header-menu a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+.header-menu a:hover {
+    text-decoration: underline;
+}
+
+.seccion-titulo {
+    max-width: 1200px;
+    margin: 40px auto 10px auto;
+    padding: 0 20px;
+    color: #008643;
+    font-size: 24px;
+    border-bottom: 3px solid #05d66df8;
+    padding-bottom: 5px;
+}
+
+.grid-jugadores {
+    max-width: 1200px;
+    margin: 0 auto 40px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.tarjeta-jugador {
+    background-color: white;
+    border: 2px solid #008643;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-jugador:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.tarjeta-jugador img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 4px;
+    background-color: #ddd;
+}
+
+.tarjeta-jugador .nombre {
+    margin: 15px 0 5px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.tarjeta-jugador .datos {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.contenedor-principal {
+    margin-top: 35px;
+    margin-bottom: 40px;
+}
+
+.footer {
+    background-color: #008643;
+    color: white;
+    min-height: 120px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.footer img {
+    height: 120px;
+    width: 240px;
+    object-fit: contain;
+   
+    border-radius: 5px;
