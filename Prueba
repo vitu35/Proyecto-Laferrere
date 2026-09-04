@@ -13,9 +13,10 @@
 
         <div class="escudo-contenedor">
             <img src="imagenes/foto.png" alt="Escudo Deportivo Laferrere">
+            <h1 class="nombre">Club Social y Cultural Deportivo Laferrere</h1>
         </div>
 
-        <p>Deportivo Laferrere</p>
+
 
         <div class="header-menu">
 
