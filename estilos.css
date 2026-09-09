@@ -71,7 +71,7 @@ body {
     gap: 7px;
     opacity: 0;
     transform: translateY(-20px);
-    transition: opacity 0.4s ease, transform 0.4s ease;
+    transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
 .header:hover .escudo-contenedor {
@@ -103,20 +103,28 @@ body {
 }
 .ubicador {
   position: relative;
-  display: inline-block;
-  padding-right: 10px;
-  margin-right: 45px;
+  display: inline-end;
+  align-items: center;
   gap: -10px;
+  margin-bottom:40px;
+  padding-bottom:40px;
 }
 .opciones{
     background-color: #008643;
     color: white;
     text-shadow: 1px 1px black;
     border: none;
-    padding: 12px;
+    padding: 18px;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.4s ease, background-color 0.2s ease, color 0.2s ease;
 }
+
+.header:hover .opciones {
+    opacity: 1;
+}
+
 .opciones:hover {
     background-color:white;
     color: black;
@@ -143,17 +151,25 @@ body {
 .ubicador:hover .opcionesContenedor {
     display: block;
 }
-
  .redes {
-    max-width: 30px;
+    width: 30px;
     height: 30px;
-    gap: 10px;
     object-fit: contain;
     border-radius: 50%;
- }
+    display: block;
+    margin-top: -15px;
+    opacity: 0;
+    transform: translateY(-15px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.header:hover .redes {
+        opacity: 1;
+        transform: translateY(0);
+}
+
  .redes:hover {
     transform: scale(1.2);
-    transition: transform 0.3s ease;
     background-color: #008643;
 }
 
@@ -231,34 +247,39 @@ body {
 .footer {
     background-color: #008643;
     color: white;
-    min-height: 110px;
+    min-height: 90px;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 30px;
     box-sizing: border-box;
     padding: 20px;
     margin-top: auto;
     border-top: solid 3px  #05d66df8;
 }
-
-.footer img {
-    height: 90px;
-    width: 120px;
+.sponsors {
+    display: flex;
+	flex:2;
+    gap: 140px;
+    align-items: center;
+    justify-content: center;
+}
+.sponsors img {
+    height: 80px;
+    width: 100px;
     object-fit: contain;
     border-radius: 5px;
     display: block;
 }
 
 .footer p {
-    margin: 0;
+	margin-top:-5px;
     font-size: 10px;
-    text-align: right;
     line-height: 1.3;
-    text-decoration: wavy;
     align-self: flex-end;
+	position: absolute;
+	left: 50%;
+	flex:1;
+	transform: translateX(-50%);
 }
+
 #pantalla-carga {
             position: fixed;
             top: 0;
