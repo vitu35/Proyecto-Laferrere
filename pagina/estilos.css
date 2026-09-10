@@ -107,7 +107,7 @@ body {
     transform: translateY(0);
 }
 .ubicador {
-  position: absolute;
+  position: relative;
   display: inline-end;
   align-items: center;
   gap: 0;
