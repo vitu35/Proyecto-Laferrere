@@ -108,7 +108,7 @@ body {
 }
 .ubicador {
   position: relative;
-  display: inline-flex;
+  display: inline-end;
   align-items: center;
   gap: 0;
   margin-bottom: 40px;
