@@ -401,5 +401,6 @@ body {
 .imagenes-articulos{    
     display: flex;
     flex-direction: row;
-
+    height: 20px;
+    width: 20px;
 }
