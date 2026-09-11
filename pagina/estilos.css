@@ -398,7 +398,7 @@ body {
                 visibility: hidden;
             }
         }
-.imagenes-articulos img{    
+.imagenes-articulos{    
     display: flex;
     flex-direction: row;
 
