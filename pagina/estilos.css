@@ -407,12 +407,11 @@ div.contenedor-articulos {
 
 div.imagenes-articulos {
   margin: 5px;
-  border: 1px solid #ccc;
   width: 180px;
 }
 
 div.imagenes-articulos:hover {
-  border: 1px solid #777;
+ 
 }
 
 div.imagenes-articulos img {
