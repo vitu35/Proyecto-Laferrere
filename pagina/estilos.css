@@ -398,9 +398,14 @@ body {
                 visibility: hidden;
             }
         }
-.imagenes-articulos{    
+.contenedor-articulos{    
     display: flex;
     flex-direction: row;
-    height: 20px;
-    width: 20px;
+}
+.imagenes-articulos{
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden;
 }
