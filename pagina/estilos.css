@@ -398,11 +398,8 @@ body {
                 visibility: hidden;
             }
         }
-.imagenes-articulos div{    
+.imagenes-articulos img{    
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    
+
 }
