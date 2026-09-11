@@ -400,6 +400,8 @@ body {
         }
 .contenedor-articulos{    
     display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
     flex-direction: row;
 }
 .imagenes-articulos{
