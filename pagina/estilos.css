@@ -412,7 +412,7 @@ div.imagenes-articulos {
 }
 
 div.imagenes-articulos img:hover {
-  transform: scale(1.2); 
+  transform: scale(1.15); 
 }
 
 div.imagenes-articulos img {
