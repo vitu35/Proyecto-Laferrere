@@ -442,8 +442,9 @@ div.precio{
 }
 div.titulo-idumentaria {
     text-align: center;
-    margin-top: 40px;
-    m.noticias {
+    margin-top: 90px;
+}
+m.noticias {
     width: 100%;
     height: 200px;
     box-sizing: content-box ;
@@ -483,7 +484,7 @@ div.titulo-idumentaria {
     display: inline-block;
     flex-direction: column;
     font-size: 9px;
-}argin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .divisor {
