@@ -444,48 +444,6 @@ div.titulo-idumentaria {
     text-align: center;
     margin-top: 90px;
 }
-m.noticias {
-    width: 100%;
-    height: 200px;
-    box-sizing: content-box ;
-    margin-top: 110px;
-    z-index: 10;
-    background-color: #00a653;
-    border: 2px, solid, #666 ;
-}
-.noticiasimagen {
-    flex-direction: row;
-    box-sizing: border-box;
-    width: 100%;
-    height: 80%;
-    margin-top: 2px;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    gap: 60px;
-}
-.noticiasimagen img {
-    border: 3px, solid, #666;   
-}
-.noticiastexto {
-    height: 20%;
-    width: 100%;
-    box-sizing: content-box;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    gap: 60px;
-}
-.noticiastexto h1 {
-    font-size: 15px;
-}
-.noticiastexto p {
-    display: inline-block;
-    flex-direction: column;
-    font-size: 9px;
-    margin-bottom: 20px;
-}
 
 .divisor {
   border: none;               
@@ -495,5 +453,3 @@ m.noticias {
   margin: 30px auto;          
   border-radius: 2px;  
 }
-
-
