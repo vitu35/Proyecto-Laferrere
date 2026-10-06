@@ -453,3 +453,12 @@ div.titulo-idumentaria {
   margin: 30px auto;          
   border-radius: 2px;  
 }
+.menu-boton{
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
+    width: 100px;
+    height:100px;
+    border:none;
+    background-color: rgba(0, 0, 0, 0);
+}
