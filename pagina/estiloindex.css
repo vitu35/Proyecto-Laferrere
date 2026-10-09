@@ -50,5 +50,22 @@
     margin: 20px;
 }
 
+.calendarioindex{
+ margin-top: 40px;
+ margin-bottom: 40px;
+ width: 45%;
+ height: 30%;
+ box-sizing: border-box;
+ background-color: #00a653;
+ border: 3px, solid, #00a653;
+ border-radius: 10%;
+}
 
+.calendariotexto {
+    
+}
+
+.calendarioequipos {
+
+}
 
