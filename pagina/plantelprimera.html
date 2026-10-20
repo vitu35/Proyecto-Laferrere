@@ -267,7 +267,9 @@
                     type="button"
                     aria-label="Partido anterior">&#10094;</button>
 
-            <div class="carrusel" id="carrusel"></div>
+            <div class="carrusel" id="carrusel">
+               +
+            </div>
 
             <button class="flecha-carrusel"
                     id="siguiente"
@@ -307,16 +309,15 @@
             tarjeta.classList.add("partido");
 
             tarjeta.innerHTML = `
-                <img
-                    src="imagenes/partido${i}.png"
-                    alt="Foto del partido ${i}"
-                    loading="lazy"
-                >
-                <div class="info-partido">
-                    <p class="fecha-partido">Fecha ${i}</p>
-                    <h3>Deportivo Laferrere vs Rival ${i}</h3>
-                </div>
-            `;
+    <div class="imagenes-partido-container">
+        <img src="imagenes/foto.png" alt="Foto del partido ${i}" loading="lazy">
+        <img src="imagenes/descarga${i}.png" alt="Foto del partido ${i}" loading="lazy">
+    </div>
+    <div class="info-partido">
+        <p class="fecha-partido">Fecha ${i}</p>
+        <h3>Deportivo Laferrere vs Rival ${i}</h3>
+    </div>
+`;
 
             carrusel.appendChild(tarjeta);
         }
