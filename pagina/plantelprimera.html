@@ -1,18 +1,19 @@
+
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jugadores</title>
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="estilosplantel.css">
 </head>
 
-<body class="fondo">
-
+<body>
     <div id="pantalla-carga">
         <div class="loader-contenido">
-            <img src="imagenes/foto.png" alt="Deportivo Laferrere" class="loader-escudo">
+            <img src="imagenes/foto.png"
+                 alt="Deportivo Laferrere"
+                 class="loader-escudo">
         </div>
     </div>
 
@@ -20,67 +21,53 @@
 
         <div class="escudo-contenedor">
             <img src="imagenes/foto.png" alt="Escudo Deportivo Laferrere">
-
-            <a href="index.html" target="_blank">
-                <h1 class="nombreClub">Club Social y Cultural Deportivo Laferrere</h1>
+            <a href="index.html">
+                <h1 class="nombreClub">
+                    Club Social y Cultural Deportivo Laferrere
+                </h1>
             </a>
         </div>
 
-        <div class="header-menu">
+        <div class="menu-container">
+            <div class="dropdown">
+                <button class="dropbtn" aria-label="Abrir menú" type="button">
+                    <img src="imagenes/menu.png" alt="Menú" class="menu-icon">
+                </button>
 
-            <div class="ubicador">
-                <button class="opciones">Información</button>
-                <div class="opcionesContenedor">
-                    <a href="https://google.com" target="_blank">
-                        <b>Historia</b>
-                    </a>
-                    <a href="https://google.com" target="_blank">
-                        <b>Datos</b>
-                    </a>
+                <div class="dropdown-content">
+
+                    <div class="submenu">
+                        <a href="#" class="submenu-trigger">Información</a>
+                        <div class="submenu-content">
+                            <a href="#">Historia</a>
+                            <a href="#">Datos</a>
+                        </div>
+                    </div>
+
+                    <div class="submenu">
+                        <a href="#" class="submenu-trigger">Tienda</a>
+                        <div class="submenu-content">
+                            <a href="articulos.html">Artículos</a>
+                            <a href="#">Club</a>
+                        </div>
+                    </div>
+
+                    <div class="submenu">
+                        <a href="#" class="submenu-trigger">Deportes</a>
+                        <div class="submenu-content">
+                            <a href="plantelprimera.html">Fut. Profesional</a>
+                            <a href="#">Fut. Amateur</a>
+                            <a href="#">Otras Disciplinas</a>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-
-            <div class="ubicador">
-                <button class="opciones">Tienda</button>
-                <div class="opcionesContenedor">
-                    <a href="articulos.html" target="_blank">
-                        <b>Artículos</b>
-                    </a>
-                    <a href="https://google.com" target="_blank">
-                        <b>Club</b>
-                    </a>
-                </div>
-            </div>
-
-            <div class="ubicador">
-                <button class="opciones">Deportes</button>
-                <div class="opcionesContenedor">
-                    <a href="plantelprimera.html" target="_blank">
-                        <b>Fut. Profesional</b>
-                    </a>
-                    <a href="https://google.com" target="_blank">
-                        <b>Fut. Amateur</b>
-                    </a>
-                    <a href="https://google.com" target="_blank">
-                        <b>Otras Disciplinas</b>
-                    </a>
-                </div>
-            </div>
-
-            <div class="ubicador">
-                <a href="https://www.instagram.com/lafeoficial/?hl=es" target="_blank">
-                    <img src="imagenes/ig.webp" alt="logo de Instagram" class="redes">
-                </a>
-                <a href="https://www.twitter.com/lafeoficial" target="_blank">
-                    <img src="imagenes/twitter.png" alt="logo de Twitter" class="redes">
-                </a>
-            </div>
-
         </div>
-
     </div>
 
-    <div class="contenedor-principal">
+    <main class="contenedor-principal">
+
         <h1 class="seccion-titulo">Plantel Laferrere</h1>
 
         <h2 class="seccion-titulo">Arqueros</h2>
@@ -92,7 +79,8 @@
                 <p class="nombre">Tiago Libares</p>
                 <p class="datos">Posición: Portero | Edad: 29 años</p>
                 <br>
-                <a href="https://www.transfermarkt.com.ar/tiago-libares/profil/spieler/871482" target="_blank">Transfermarkt</a>
+                <a href="https://www.transfermarkt.com.ar/tiago-libares/profil/spieler/871482"
+                   target="_blank" rel="noopener noreferrer">Transfermarkt</a>
             </div>
 
             <div class="tarjeta-jugador">
@@ -100,7 +88,8 @@
                 <p class="nombre">Juan Rois</p>
                 <p class="datos">Posición: Portero | Edad: 23 años</p>
                 <br>
-                <a href="https://www.transfermarkt.com.ar/juan-rois/profil/spieler/1375334" target="_blank">Transfermarkt</a>
+                <a href="https://www.transfermarkt.com.ar/juan-rois/profil/spieler/1375334"
+                   target="_blank" rel="noopener noreferrer">Transfermarkt</a>
             </div>
 
         </div>
@@ -266,33 +255,106 @@
             </div>
 
         </div>
+    </main>
 
-    </div>
+    <section class="seccion-partidos" id="partidos">
+        <h2 class="titulo-partidos">Últimos partidos</h2>
+        <p class="subtitulo-partidos">Reviví los encuentros de La Verde</p>
 
-    <div class="footer">
+        <div class="carrusel-contenedor">
+            <button class="flecha-carrusel"
+                    id="anterior"
+                    type="button"
+                    aria-label="Partido anterior">&#10094;</button>
 
-        <p style="font-size: 12px; margin-top:-15px;">
-            Pagina hecha por Blanco Vicente, Colombo Agustin y Gestro Bruno
+            <div class="carrusel" id="carrusel"></div>
+
+            <button class="flecha-carrusel"
+                    id="siguiente"
+                    type="button"
+                    aria-label="Partido siguiente">&#10095;</button>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p class="creditos">
+            Página hecha por Blanco Vicente, Colombo Agustin y Gestro Bruno
         </p>
 
         <div class="sponsors">
-
             <img src="imagenes/sponsor1.png" alt="Sponsor 1">
-
             <img src="imagenes/sponsor2.png" alt="Sponsor 2">
-
             <img src="imagenes/sponsor3.png" alt="Sponsor 3">
-
             <img src="imagenes/sponsor4.png" alt="Sponsor 4">
-
         </div>
 
         <p>
-            © 2026 Club Social y Cultural Deportivo Laferrere. Todos los derechos reservados.
+            © 2026 Club Social y Cultural Deportivo Laferrere.
+            Todos los derechos reservados.
         </p>
+    </footer>
 
-    </div>
+    <script>
+        const carrusel = document.getElementById("carrusel");
+        const siguiente = document.getElementById("siguiente");
+        const anterior = document.getElementById("anterior");
 
+        let partidoActual = 0;
+        const totalPartidos = 42;
+
+        for (let i = 1; i <= totalPartidos; i++) {
+            const tarjeta = document.createElement("article");
+            tarjeta.classList.add("partido");
+
+            tarjeta.innerHTML = `
+                <img
+                    src="imagenes/partido${i}.png"
+                    alt="Foto del partido ${i}"
+                    loading="lazy"
+                >
+                <div class="info-partido">
+                    <p class="fecha-partido">Fecha ${i}</p>
+                    <h3>Deportivo Laferrere vs Rival ${i}</h3>
+                </div>
+            `;
+
+            carrusel.appendChild(tarjeta);
+        }
+
+        function mostrarPartido(indice) {
+            partidoActual = Math.max(
+                0,
+                Math.min(indice, totalPartidos - 1)
+            );
+
+            const tarjeta = carrusel.querySelector(".partido");
+
+            if (!tarjeta) return;
+
+            const ancho = tarjeta.getBoundingClientRect().width;
+
+            carrusel.scrollTo({
+                left: partidoActual * ancho,
+                behavior: "smooth"
+            });
+
+            anterior.disabled = partidoActual === 0;
+            siguiente.disabled = partidoActual === totalPartidos - 1;
+        }
+
+        siguiente.addEventListener("click", () => {
+            mostrarPartido(partidoActual + 1);
+        });
+
+        anterior.addEventListener("click", () => {
+            mostrarPartido(partidoActual - 1);
+        });
+
+        window.addEventListener("resize", () => {
+            mostrarPartido(partidoActual);
+        });
+
+        mostrarPartido(0);
+    </script>
 </body>
-
 </html>
