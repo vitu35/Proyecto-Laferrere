@@ -1,0 +1,906 @@
+html,
+body {
+    height: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    font-style: oblique;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.fondo {
+    background-image: url("imagenes/fondo.png");
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+
+.header {
+    background-color: #05d66df8;
+    color: white;
+    height: 35px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    overflow: visible;
+    transition: height 0.4s ease;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    border-bottom: 4px solid #008643;
+}
+
+.header:hover {
+    height: 100px;
+}
+
+.nombreClub {
+    display: block;
+    width: 170px;
+    margin: 0;
+    font-size: medium;
+    line-height: 1.2;
+    font-style: italic;
+    text-align: left;
+    color: white;
+}
+
+.escudo-contenedor a {
+    text-decoration: none;
+}
+
+.escudo-contenedor a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+.escudo-contenedor {
+    width: 350px;
+    height: 80px;
+    padding-left: 10px;
+    border-radius: 6px;
+    float: left;
+    margin-right: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 7px;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.header:hover .escudo-contenedor {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.escudo-contenedor img {
+    width: 130px;
+    height: 130px;
+    object-fit: contain;
+}
+
+.escudo-contenedor img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+
+
+.header-menu {
+    float: right;
+    margin-top: 5px;
+    opacity: 0;
+    transform: translateY(-15px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+    flex-wrap: nowrap;
+}
+
+.header:hover .header-menu {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.ubicador {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 0;
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+}
+
+.opciones {
+    background-color: #008643;
+    color: white;
+    text-shadow: 1px 1px black;
+    border: none;
+    padding: 18px;
+    cursor: pointer;
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.4s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.header:hover .opciones {
+    opacity: 1;
+}
+
+.opciones:hover {
+    background-color: white;
+    color: black;
+}
+
+.opcionesContenedor {
+    display: none;
+    position: absolute;
+    background-color: #008643;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.opcionesContenedor a {
+    color: white;
+    font-size: 12px;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.opcionesContenedor a:hover {
+    background-color: white;
+    color: black;
+}
+
+.ubicador:hover .opcionesContenedor {
+    display: block;
+}
+
+.redes {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    border-radius: 50%;
+    display: block;
+    margin-top: -15px;
+    opacity: 0;
+    transform: translateY(-15px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.header:hover .redes {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.redes:hover {
+    background-color: #008643;
+}
+
+.header-menu a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+.header-menu a:hover {
+    text-decoration: underline;
+}
+
+.menu-boton {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
+    width: 100px;
+    height: 100px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.menu-container {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-family: Arial, sans-serif;
+    z-index: 200;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-15px);
+    transition: opacity 0.3s ease,
+                transform 0.3s ease,
+                visibility 0.3s ease;
+}
+
+.header:hover .menu-container,
+.header:focus-within .menu-container {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropbtn {
+    background-color: transparent;
+    padding: 2px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.dropbtn:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 6px;
+}
+
+.dropbtn:focus-visible {
+    outline: 2px solid white;
+    outline-offset: 3px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: auto;
+    min-width: 220px;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    z-index: 1000;
+    padding: 5px 0;
+}
+
+.dropdown:hover > .dropdown-content,
+.dropdown:focus-within > .dropdown-content {
+    display: block;
+}
+
+.submenu {
+    position: relative;
+}
+
+.dropdown-content a {
+    display: block;
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.dropdown-content a:hover {
+    background-color: #05d66df8;
+    color: #fff;
+    font-weight: bold;
+}
+
+.submenu-content {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 100%;
+    left: auto;
+    min-width: 180px;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    padding: 5px 0;
+    z-index: 1001;
+}
+
+.submenu:hover > .submenu-content,
+.submenu:focus-within > .submenu-content {
+    display: block;
+}
+
+.submenu-trigger {
+    cursor: pointer;
+}
+
+.menu-icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+
+
+.contenedor-principal {
+    margin-top: 35px;
+    margin-bottom: 40px;
+    flex: 1;
+    width: 100%;
+}
+
+.seccion-titulo {
+    max-width: 1200px;
+    margin: 80px auto 10px;
+    padding: 0 20px 5px;
+    color: #008643;
+    font-size: 24px;
+    text-align: center;
+    scroll-margin-top: 110px;
+}
+
+.grid-jugadores {
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+}
+
+.tarjeta-jugador {
+    min-width: 0;
+    background-color: white;
+    border: 2px solid #008643;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.tarjeta-jugador:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+.tarjeta-jugador img {
+    display: block;
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 4px;
+    background-color: #ddd;
+}
+
+.tarjeta-jugador .nombre {
+    margin: 15px 0 5px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.tarjeta-jugador .datos {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #666;
+}
+
+.tarjeta-jugador a {
+    color: #008643;
+}
+
+.tarjeta-jugador a:hover {
+    color: #05a653;
+}
+
+
+
+#pantalla-carga {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: 9999;
+    animation: desaparecer 1s ease forwards;
+    animation-delay: 2s;
+}
+
+#pantalla-carga::before {
+    content: "";
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    top: -25%;
+    left: -25%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        #008744,
+        #00a653,
+        white,
+        #008744,
+        transparent
+    );
+    opacity: 0.35;
+    transform: rotate(-10deg);
+    animation: cascada 3s linear infinite;
+}
+
+#pantalla-carga::after {
+    content: "";
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    top: -25%;
+    left: -25%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        #008744,
+        white,
+        #008744,
+        transparent
+    );
+    opacity: 0.2;
+    transform: rotate(-10deg);
+    animation: cascada 3s linear infinite;
+    animation-delay: 1.5s;
+}
+
+.loader-contenido {
+    position: relative;
+    z-index: 2;
+}
+
+.loader-escudo {
+    display: block;
+    width: 170px;
+    max-width: 70vw;
+    height: auto;
+    animation: palpitar 1.5s ease-in-out infinite;
+}
+
+@keyframes cascada {
+    0% {
+        transform: translateY(0%) rotate(-10deg);
+    }
+
+    100% {
+        transform: translateY(20%) rotate(10deg);
+    }
+}
+
+@keyframes palpitar {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes desaparecer {
+    0% {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+}
+
+
+
+div.contenedor-articulos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+div.imagenes-articulos {
+    margin: 5px;
+    width: 180px;
+}
+
+div.imagenes-articulos img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+div.imagenes-articulos img:hover {
+    transform: scale(1.15);
+}
+
+div.descripcion {
+    color: rgb(66, 66, 66);
+    padding-top: 15px;
+    padding-left: 10px;
+    text-align: left;
+    min-height: 2.8em;
+}
+
+div.descripcion:hover {
+    color: rgb(177, 174, 174);
+    cursor: pointer;
+}
+
+div.precio {
+    padding-left: 10px;
+    text-align: left;
+    font-weight: bold;
+    margin-top: auto;
+}
+
+div.titulo-idumentaria {
+    text-align: center;
+    margin-top: 90px;
+}
+
+.divisor {
+    border: none;
+    height: 3px;
+    background-color: #dcdcdc;
+    width: 85%;
+    margin: 30px auto;
+    border-radius: 2px;
+}
+
+
+
+.footer {
+    background-color: #008643;
+    color: white;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px 20px 15px;
+    margin-top: auto;
+    border-top: 3px solid #05d66df8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.sponsors {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.sponsors img {
+    height: 80px;
+    width: 100px;
+    object-fit: contain;
+    border-radius: 5px;
+    display: block;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 10px;
+    line-height: 1.5;
+    text-align: center;
+    width: 100%;
+}
+
+.footer .creditos {
+    font-size: 12px;
+}
+
+
+
+.seccion-partidos {
+    width: 100%;
+    padding: 35px 20px;
+    background: #111;
+    color: white;
+    text-align: center;
+    scroll-margin-top: 100px;
+}
+
+.titulo-partidos {
+    margin: 0 0 10px;
+    font-size: 2rem;
+}
+
+.subtitulo-partidos {
+    margin: 0 0 25px;
+    color: #ccc;
+    font-size: 1rem;
+}
+
+.carrusel-contenedor {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carrusel {
+    display: flex;
+    flex: 1 1 auto;
+    min-width: 0;
+    gap: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    padding: 12px 0 20px;
+    scrollbar-width: none;
+}
+
+.carrusel::-webkit-scrollbar {
+    display: none;
+}
+
+.partido {
+    flex: 0 0 100%;
+    width: 100%;
+    min-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    scroll-snap-align: start;
+    background: #1d1d1d;
+    border: 5px solid #05a653;
+    border-radius: 12px;
+    color: white;
+}
+
+.partido img {
+    display: block;
+    width: 100%;
+    height: 320px;
+    object-fit: contain;
+    background: #111;
+}
+
+.info-partido {
+    padding: 16px;
+}
+
+.fecha-partido {
+    margin: 0 0 8px;
+    color: #bdbdbd;
+    font-size: 0.9rem;
+}
+
+.partido h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: white;
+}
+
+.flecha-carrusel {
+    flex: 0 0 42px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    background: #258b43;
+    color: white;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.flecha-carrusel:hover:not(:disabled) {
+    background: #176b31;
+    transform: scale(1.05);
+}
+
+.flecha-carrusel:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.flecha-carrusel:focus-visible {
+    outline: 2px solid white;
+    outline-offset: 3px;
+}
+
+
+
+@media (max-width: 900px) {
+    .grid-jugadores {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .tarjeta-jugador img {
+        height: 280px;
+    }
+
+    .partido img {
+        height: 260px;
+    }
+
+    .sponsors {
+        gap: 30px;
+    }
+}
+
+
+
+@media (max-width: 600px) {
+    .header {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .escudo-contenedor {
+        width: calc(100% - 65px);
+        padding-left: 0;
+        gap: 5px;
+    }
+
+    .escudo-contenedor img {
+        width: 65px;
+        height: 65px;
+    }
+
+    .nombreClub {
+        width: auto;
+        max-width: 180px;
+        font-size: 12px;
+    }
+
+    .menu-container {
+        right: 10px;
+    }
+
+    .dropbtn {
+        margin-top: 0;
+    }
+
+    .menu-icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .dropdown-content {
+        min-width: 190px;
+    }
+
+    .submenu-content {
+        min-width: 160px;
+    }
+
+    .contenedor-principal {
+        margin-top: 35px;
+    }
+
+    .seccion-titulo {
+        margin-top: 55px;
+        font-size: 21px;
+    }
+
+    .grid-jugadores {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        padding: 0 10px;
+    }
+
+    .tarjeta-jugador {
+        padding: 10px;
+        border-radius: 14px;
+    }
+
+    .tarjeta-jugador img {
+        height: 200px;
+    }
+
+    .tarjeta-jugador .nombre {
+        font-size: 15px;
+        overflow-wrap: anywhere;
+    }
+
+    .tarjeta-jugador .datos {
+        font-size: 12px;
+    }
+
+    .seccion-partidos {
+        padding: 25px 10px;
+    }
+
+    .titulo-partidos {
+        font-size: 1.6rem;
+    }
+
+    .carrusel-contenedor {
+        gap: 6px;
+    }
+
+    .flecha-carrusel {
+        flex-basis: 34px;
+        width: 34px;
+        height: 34px;
+        font-size: 1.1rem;
+    }
+
+    .partido img {
+        height: 190px;
+    }
+
+    .info-partido {
+        padding: 12px;
+    }
+
+    .partido h3 {
+        font-size: 1rem;
+    }
+
+    .sponsors {
+        gap: 15px;
+    }
+
+    .sponsors img {
+        width: 70px;
+        height: 55px;
+    }
+
+    .footer {
+        padding: 20px 10px 15px;
+    }
+}
+
+@media (max-width: 360px) {
+    .grid-jugadores {
+        grid-template-columns: 1fr;
+    }
+
+    .tarjeta-jugador img {
+        height: 260px;
+    }
+
+    .nombreClub {
+        font-size: 11px;
+    }
+}
