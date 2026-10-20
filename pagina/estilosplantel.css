@@ -659,6 +659,7 @@ div.titulo-idumentaria {
     max-width: 1000px;
     margin: 0 auto;
     overflow: hidden;
+    
 }
 
 .carrusel {
@@ -672,6 +673,7 @@ div.titulo-idumentaria {
     scroll-snap-type: x mandatory;
     padding: 12px 0 20px;
     scrollbar-width: none;
+    flex-direction: row;
 }
 
 .carrusel::-webkit-scrollbar {
@@ -903,4 +905,16 @@ div.titulo-idumentaria {
     .nombreClub {
         font-size: 11px;
     }
+}
+.imagenes-partido-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;           
+    width: 100%;                     
+    gap: 10px;                     
+}
+
+.imagenes-partido-container img {
+    max-width: 20%;                 
+    max-height: 20%;
 }
