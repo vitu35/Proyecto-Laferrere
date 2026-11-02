@@ -21,9 +21,3 @@ try {
     die("Error de conexión: " . $e->getMessage());
 }
 
-// CÓDIGO TEMPORAL DE PRUEBA (Borralo después)
-if (isset($pdo)) {
-    echo "<div style='background: #d4edda; color: #155724; padding: 15px; text-align: center; font-weight: bold;'>
-            ¡Conexión exitosa! El archivo conexion.php está conectado correctamente a laferrere_db.
-          </div>";
-}
