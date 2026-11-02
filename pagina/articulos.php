@@ -1,3 +1,9 @@
+<?php
+require_once __DIR__ . '/conexion.php';
+// Aquí va la consulta para traer los artículos de la base de datos
+$stmt = $pdo->query("SELECT * FROM articulos");
+$productos = $stmt->fetchAll();
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
