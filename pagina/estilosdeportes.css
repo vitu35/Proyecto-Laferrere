@@ -1,0 +1,357 @@
+
+.deportes-principal {
+    padding-bottom: 30px;
+}
+
+.portada-deporte {
+    width: 90%;
+    max-width: 1200px;
+    margin: 90px auto 35px;
+    padding: 30px;
+    background-color: white;
+    border: 2px solid #008643;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+    text-align: center;
+}
+
+.portada-deporte h2 {
+    margin-top: 0;
+    color: #008643;
+    font-size: 30px;
+}
+
+.portada-deporte p {
+    color: #444;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.seccion-contenido {
+    width: 90%;
+    max-width: 1200px;
+    margin: 35px auto;
+    scroll-margin-top: 115px;
+}
+
+.subtitulo-seccion {
+    margin: 0 0 15px;
+    padding-bottom: 8px;
+    color: #008643;
+    font-size: 24px;
+    text-align: center;
+    border-bottom: 2px solid #05a653;
+}
+
+.panel-info {
+    padding: 25px;
+    background-color: white;
+    border: 2px solid #008643;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #444;
+    line-height: 1.7;
+}
+
+.panel-info p {
+    margin: 10px 0 15px;
+    font-size: 15px;
+}
+
+.panel-info h3 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    color: #008643;
+    font-size: 19px;
+}
+
+.lista-jugadores {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px 25px;
+    padding-left: 25px;
+    text-align: left;
+}
+
+.lista-jugadores li {
+    padding: 4px 0;
+}
+
+.nota {
+    margin-top: 25px;
+    padding: 15px;
+    background-color: #e8f8ee;
+    border-left: 4px solid #008643;
+    border-radius: 5px;
+    color: #444;
+}
+
+.boton-verde {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 11px 20px;
+    background-color: #008643;
+    color: white !important;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.boton-verde:hover {
+    background-color: #05a653;
+    color: white !important;
+    transform: translateY(-2px);
+}
+
+
+
+.disciplinas-layout {
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr);
+    gap: 25px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 35px auto;
+    align-items: start;
+}
+
+.barra-disciplinas {
+    position: sticky;
+    top: 120px;
+    padding: 20px;
+    background-color: white;
+    border: 2px solid #008643;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.barra-disciplinas h3 {
+    margin: 0 0 15px;
+    padding-bottom: 10px;
+    color: #008643;
+    text-align: center;
+    border-bottom: 2px solid #05a653;
+}
+
+.barra-disciplinas a {
+    display: block;
+    margin: 7px 0;
+    padding: 10px;
+    color: #333;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.barra-disciplinas a:hover {
+    background-color: #008643;
+    color: white;
+}
+
+.contenido-disciplinas {
+    min-width: 0;
+}
+
+.bloque-disciplina {
+    margin-bottom: 25px;
+    padding: 25px;
+    background-color: white;
+    border: 2px solid #008643;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    scroll-margin-top: 120px;
+}
+
+.bloque-disciplina h2 {
+    margin-top: 0;
+    padding-bottom: 10px;
+    color: #008643;
+    text-align: center;
+    border-bottom: 2px solid #05a653;
+}
+
+.bloque-disciplina h3 {
+    margin-top: 20px;
+    color: #008643;
+}
+
+.bloque-disciplina p {
+    color: #444;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.bloque-disciplina ul {
+    padding-left: 25px;
+    color: #444;
+    line-height: 1.8;
+}
+
+
+
+.header {
+    overflow: visible;
+}
+
+.menu-container {
+    z-index: 200;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    z-index: 1000;
+}
+
+.submenu {
+    position: relative;
+}
+
+.submenu-content {
+    z-index: 1001;
+}
+
+.submenu:hover > .submenu-content,
+.submenu:focus-within > .submenu-content {
+    display: block;
+}
+
+
+
+@media (max-width: 900px) {
+
+    .portada-deporte {
+        width: 94%;
+        padding: 22px;
+    }
+
+    .seccion-contenido {
+        width: 94%;
+    }
+
+    .disciplinas-layout {
+        width: 94%;
+        grid-template-columns: 190px minmax(0, 1fr);
+        gap: 15px;
+    }
+
+    .lista-jugadores {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+
+
+@media (max-width: 600px) {
+
+    .portada-deporte {
+        margin-top: 65px;
+        padding: 18px;
+    }
+
+    .portada-deporte h2 {
+        font-size: 24px;
+    }
+
+    .portada-deporte p {
+        font-size: 14px;
+    }
+
+    .seccion-contenido {
+        width: 94%;
+        margin: 25px auto;
+    }
+
+    .subtitulo-seccion {
+        font-size: 21px;
+    }
+
+    .panel-info {
+        padding: 16px;
+    }
+
+    .panel-info p {
+        font-size: 14px;
+    }
+
+    .lista-jugadores {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 5px 15px;
+    }
+
+    .disciplinas-layout {
+        display: flex;
+        flex-direction: column;
+        width: 94%;
+    }
+
+    .barra-disciplinas {
+        position: static;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .barra-disciplinas h3 {
+        width: 100%;
+    }
+
+    .barra-disciplinas a {
+        margin: 3px;
+        padding: 9px 12px;
+        font-size: 13px;
+    }
+
+    .contenido-disciplinas {
+        width: 100%;
+    }
+
+    .bloque-disciplina {
+        padding: 17px;
+        scroll-margin-top: 60px;
+    }
+
+    .bloque-disciplina p {
+        font-size: 14px;
+    }
+
+
+    .submenu-content {
+        right: auto;
+        left: 100%;
+        top: 0;
+    }
+
+    .dropdown-content {
+        right: 0;
+        left: auto;
+    }
+
+}
+
+
+
+
+@media (max-width: 360px) {
+
+    .lista-jugadores {
+        grid-template-columns: 1fr;
+    }
+
+    .portada-deporte {
+        padding: 14px;
+    }
+
+    .panel-info {
+        padding: 12px;
+    }
+
+}
