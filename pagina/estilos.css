@@ -687,7 +687,6 @@ div.titulo-idumentaria {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    transition: opacity 0.3s ease-in-out;
 }
 
 .header:hover > .redes,
@@ -698,9 +697,7 @@ div.titulo-idumentaria {
 .redes img:hover {
     transform: scale(1.2);
     transition: transform 0.3s ease-in-out;
-    background-image: image('imagenes/ighover.png');
-    background-size: cover;
-    background-position: center;
+    background-color: #008643;
     border-radius: 50%;
 }
 
