@@ -1,5 +1,6 @@
 html, body {
     height: 100%;
+    background-color: #f0fff6;
 }
 
 body {
@@ -696,7 +697,7 @@ div.titulo-idumentaria {
 }
 .redes img:hover {
     transform: scale(1.2);
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.2s ease-in-out;
     background-color: #008643;
     border-radius: 50%;
 }
