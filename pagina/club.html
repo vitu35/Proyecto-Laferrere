@@ -1,82 +1,229 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta charset="UTF-8">
-        <title>Club</title>
-        <link rel="stylesheet" href="estilos.css">
-        <link rel="stylesheet" href="estilostienda.css">
-    </head>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Tienda de Socios y Entradas - Deportivo Laferrere</title>
+    <link rel="stylesheet" href="club.css">
+</head>
 
-    <body>
-        <div id="pantalla-carga">
-
-            <div class="loader-contenido">
-                <img src="imagenes/foto.png" alt="Deportivo Laferrere" class="loader-escudo">
-            </div>
+<body class="fondo" id="inicio">
+    <div id="pantalla-carga">
+        <div class="loader-contenido">
+            <img src="imagenes/foto.png" alt="Deportivo Laferrere" class="loader-escudo">
         </div>
-        <div class="header">
+    </div>
 
-            <div class="escudo-contenedor">
-                <img src="imagenes/foto.png" alt="Escudo Deportivo Laferrere">
-                <a href="index.html" target="_blank">
-                    <h1 class="nombreClub">Club Social y Cultural Deportivo Laferrere</h1>
-                </a>
-            </div>
+    <div class="header">
+        <div class="escudo-contenedor">
+            <img src="imagenes/foto.png" alt="Escudo Deportivo Laferrere">
+            <a href="index.html">
+                <h1 class="nombreClub">Club Social y Cultural Deportivo Laferrere</h1>
+            </a>
+        </div>
 
-            <div class="menu-container">
+        <div class="menu-container">
             <div class="login-div">
-                <button class="loginbtn">
+                <button class="loginbtn" type="button" onclick="document.getElementById('sec-sociatura').scrollIntoView({behavior:'smooth'})">
                     <img src="imagenes/login-image.png" alt="Login Imagen" class="menu-icon">
                     Ingresar
                 </button>
             </div>
             <div class="dropdown">
-                <button class="dropbtn" aria-label="Abrir menú">
-                    <img src="imagenes/menu.png" alt="" class="menu-icon">
+                <button class="dropbtn" aria-label="Abrir menú" type="button">
+                    <img src="imagenes/menu.png" alt="Menú" class="menu-icon">
                 </button>
                 <div class="dropdown-content">
+                    <a href="index.html">Inicio</a>
                     <div class="submenu">
-                        <a href="#" class="submenu-trigger">Información</a>
+                        <a href="#" class="submenu-trigger">Información ▸</a>
                         <div class="submenu-content">
-                        <a href="#">Historia</a>
-                        <a href="#">Datos</a>
+                            <a href="historia.html">Historia</a>
+                            <a href="datos.html">Datos e Instalaciones</a>
                         </div>
                     </div>
-                <div class="submenu">
-                    <a href="#" class="submenu-trigger">Tienda</a>
-                    <div class="submenu-content">
-                    <a href="articulos.html">Artículos</a>
-                    <a href="club.html">Club</a>
+                    <div class="submenu">
+                        <a href="#" class="submenu-trigger">Tienda ▸</a>
+                        <div class="submenu-content">
+                            <a href="articulos.html">Artículos</a>
+                            <a href="club.html">Socios y Entradas</a>
+                            <a href="pago.html">Página de Pago</a>
+                        </div>
+                    </div>
+                    <div class="submenu">
+                        <a href="#" class="submenu-trigger">Deportes ▸</a>
+                        <div class="submenu-content">
+                            <a href="plantelprimera.html">Fut. Profesional</a>
+                            <a href="futbolamateur.html">Fut. Amateur</a>
+                            <a href="otrasdisciplinas.html">Otras Disciplinas</a>
+                        </div>
                     </div>
                 </div>
-                <div class="submenu">
-                    <a href="#" class="submenu-trigger">Deportes</a>
-                    <div class="submenu-content">
-                    <a href="plantelprimera.html">Fut. Profesional</a>
-                    <a href="#">Fut. Amateur</a>
-                    <a href="#">Otras Disciplinas</a>
-                    </div>
-                </div>    
-                </div>
-            </div>
             </div>
         </div>
-        <div class="footer">
-            <p style="font-size: 12px; margin-top:-15px;">
-                Pagina hecha por Blanco Vicente, Colombo Agustin y Gestro Bruno
-            </p>
-            <div class="sponsors">
-            <img src="imagenes/sponsor1.png" alt="Sponsor 1">
+    </div>
 
-            <img src="imagenes/sponsor2.png" alt="Sponsor 2">
-        
-            <img src="imagenes/sponsor3.png" alt="Sponsor 3">
-
-            <img src="imagenes/sponsor4.png" alt="Sponsor 4">
-            </div>
+    <main class="contenedor-principal deportes-principal">
+        <section class="portada-deporte">
+            <h2>Tienda de Socios, Entradas y Palcos</h2>
             <p>
-                © 2026 Club Social y Cultural Deportivo Laferrere. Todos los derechos reservados.
+                Hacete socio de La Verde, adquirí tu abono anual o sacá tus entradas y palcos para alentar al equipo en el Estadio Ciudad de Laferrere.
             </p>
-    </body>
+        </section>
+
+        <section class="seccion-contenido" id="sec-sociatura">
+            <h2 class="subtitulo-seccion">Hacete Socio y Abonos</h2>
+            <div class="grid-socios">
+                <div class="tarjeta-socio">
+                    <div>
+                        <h3>Socio Activo</h3>
+                        <p class="precio-socio">$12.000 / mes</p>
+                        <ul>
+                            <li>Carnet digital y físico del club.</li>
+                            <li>Ingreso sin cargo a la Tribuna Popular todos los partidos de local.</li>
+                            <li>15% de descuento en la Tienda Oficial.</li>
+                            <li>Acceso a actividades sociales en Sede Av. Luro.</li>
+                        </ul>
+                    </div>
+                    <button type="button" class="boton-verde" onclick="irAPago('Suscripción Socio Activo (Cuota Mensual)', 12000)">Hacerme Socio Activo</button>
+                </div>
+
+                <div class="tarjeta-socio">
+                    <div>
+                        <h3>Socio Grupo Familiar</h3>
+                        <p class="precio-socio">$28.000 / mes</p>
+                        <ul>
+                            <li>Incluye titular, cónyuge y hasta 2 hijos menores de 18 años.</li>
+                            <li>Ingreso sin cargo a Popular y 50% off en Plateas.</li>
+                            <li>20% de descuento en indumentaria oficial.</li>
+                            <li>Descuento en Escuelita de Fútbol y otras disciplinas.</li>
+                        </ul>
+                    </div>
+                    <button type="button" class="boton-verde" onclick="irAPago('Suscripción Grupo Familiar (Cuota Mensual)', 28000)">Asociar Grupo Familiar</button>
+                </div>
+
+                <div class="tarjeta-socio">
+                    <div>
+                        <h3>Abono Platea Semestral</h3>
+                        <p class="precio-socio">$75.000 / semestre</p>
+                        <ul>
+                            <li>Butaca reservada en Platea Preferencial para todo el torneo.</li>
+                            <li>Acceso prioritario por puerta exclusiva.</li>
+                            <li>Estacionamiento preferencial sujeto a disponibilidad.</li>
+                            <li>Incluye partidos de Copa disputados de local.</li>
+                        </ul>
+                    </div>
+                    <button type="button" class="boton-verde" onclick="irAPago('Abono Platea Semestral 2026', 75000)">Comprar Abono</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion-contenido">
+            <h2 class="subtitulo-seccion">Venta de Entradas - Próximo Partido</h2>
+            <div class="panel-info">
+                <p><strong>Partido:</strong> Deportivo Laferrere vs Midland | <strong>Fecha:</strong> Domingo 22/11/2026 - 17:00 hs | <strong>Estadio Ciudad de Laferrere</strong></p>
+
+                <div class="controles-producto">
+                    <div>
+                        <label for="sector-estadio">Elegí el Sector del Estadio:</label>
+                        <select id="sector-estadio">
+                            <option value="Popular Local (Rodney)|8000">Popular Local (Calle Rodney) - $8.000</option>
+                            <option value="Popular Magnasco|8000">Popular Local (Calle Magnasco) - $8.000</option>
+                            <option value="Platea Baja|15000">Platea Baja - $15.000</option>
+                            <option value="Platea Alta Preferencial|20000">Platea Alta Preferencial - $20.000</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="cant-entradas">Cantidad de Entradas:</label>
+                        <input type="number" id="cant-entradas" value="1" min="1" max="6">
+                    </div>
+                </div>
+
+                <button type="button" class="boton-verde" onclick="comprarEntradas()">Continuar al Pago de Entradas</button>
+            </div>
+        </section>
+
+        <section class="seccion-contenido">
+            <h2 class="subtitulo-seccion">Compra y Reserva de Palcos</h2>
+            <div class="grid-socios">
+                <div class="tarjeta-socio">
+                    <div>
+                        <h3>Palco Oficial x 4 Personas (Por Partido)</h3>
+                        <p class="precio-socio">$90.000</p>
+                        <ul>
+                            <li>Ubicación central con vista panorámica al campo de juego.</li>
+                            <li>4 ubicaciones numeradas acolchadas.</li>
+                            <li>Servicio de catering básico incluido.</li>
+                        </ul>
+                    </div>
+                    <button type="button" class="boton-verde" onclick="irAPago('Palco Oficial x 4 Personas (vs Midland)', 90000)">Reservar Palco x4</button>
+                </div>
+
+                <div class="tarjeta-socio">
+                    <div>
+                        <h3>Palco VIP x 6 Personas (Por Partido)</h3>
+                        <p class="precio-socio">$130.000</p>
+                        <ul>
+                            <li>6 ubicaciones preferenciales techadas.</li>
+                            <li>Acceso directo por hall central y estacionamiento.</li>
+                            <li>Servicio de lunch y bebidas sin alcohol.</li>
+                        </ul>
+                    </div>
+                    <button type="button" class="boton-verde" onclick="irAPago('Palco VIP x 6 Personas (vs Midland)', 130000)">Reservar Palco VIP x6</button>
+                </div>
+
+                <div class="tarjeta-socio">
+                    <div>
+                        <h3>Palco Anual Corporativo (x 6 Personas)</h3>
+                        <p class="precio-socio">$650.000 / año</p>
+                        <ul>
+                            <li>Todos los partidos oficiales de local durante el año 2026.</li>
+                            <li>Placa identificatoria personalizada en el palco.</li>
+                            <li>2 pases de estacionamiento interno.</li>
+                        </ul>
+                    </div>
+                    <button type="button" class="boton-verde" onclick="irAPago('Palco Anual Corporativo 2026 (x6 Personas)', 650000)">Adquirir Palco Anual</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" id="pie">
+        <p class="creditos">
+            Página hecha por Blanco Vicente, Colombo Agustin y Gestro Bruno
+        </p>
+
+        <div class="sponsors">
+            <img src="imagenes/sponsor1.png" alt="Sponsor 1">
+            <img src="imagenes/sponsor2.png" alt="Sponsor 2">
+            <img src="imagenes/sponsor3.png" alt="Sponsor 3">
+            <img src="imagenes/sponsor4.png" alt="Sponsor 4">
+        </div>
+
+        <p class="info-legal">
+            <strong>Estadio Ciudad de Laferrere (Rodney y Magnasco)</strong> | <strong>Sede Social (Av. Luro 5728, Gregorio de Laferrere, La Matanza)</strong>
+        </p>
+        <p class="info-legal">
+            Información Legal: Personería Jurídica N° 4120 - Afiliado directamente a la Asociación del Fútbol Argentino (AFA).
+        </p>
+        <a href="#inicio" class="btn-volver-arriba">↑ Volver al principio</a>
+        <p>© 2026 Club Social y Cultural Deportivo Laferrere. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        function irAPago(concepto, total) {
+            window.location.href = `pago.html?concepto=${encodeURIComponent(concepto)}&total=${total}`;
+        }
+
+        function comprarEntradas() {
+            const seleccion = document.getElementById("sector-estadio").value.split("|");
+            const sector = seleccion[0];
+            const precioUnitario = Number(seleccion[1]);
+            const cantidad = Math.max(1, Number(document.getElementById("cant-entradas").value));
+            const total = precioUnitario * cantidad;
+            const concepto = `Entradas vs Midland - Sector: ${sector} (x${cantidad})`;
+            irAPago(concepto, total);
+        }
+    </script>
+</body>
 </html>

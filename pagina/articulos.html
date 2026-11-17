@@ -3,253 +3,294 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <title>articulos</title>
-    <link rel="stylesheet" href="estilos.css">
-    <link rel="stylesheet" href="estilostienda.css">
+    <title>Tienda Oficial - Deportivo Laferrere</title>
+    <link rel="stylesheet" href="articulos.css">
 </head>
 
-<body>
+<body id="inicio">
     <div id="pantalla-carga">
-
         <div class="loader-contenido">
-               <img src="imagenes/foto.png" alt="Deportivo Laferrere" class="loader-escudo">
+            <img src="imagenes/foto.png" alt="Deportivo Laferrere" class="loader-escudo">
         </div>
     </div>
-    <div class="header">
 
+    <div class="header">
         <div class="escudo-contenedor">
             <img src="imagenes/foto.png" alt="Escudo Deportivo Laferrere">
-            <a href="index.html" target="_blank">
+            <a href="index.html">
                 <h1 class="nombreClub">Club Social y Cultural Deportivo Laferrere</h1>
             </a>
         </div>
 
         <div class="menu-container">
-        <div class="login-div">
-            <button class="loginbtn">
-                <img src="imagenes/login-image.png" alt="Login Imagen" class="menu-icon">
-                Ingresar
-            </button>
-        </div>
-        <div class="dropdown">
-            <button class="dropbtn" aria-label="Abrir menú">
-                <img src="imagenes/menu.png" alt="" class="menu-icon">
-            </button>
-            <div class="dropdown-content">
-                <div class="submenu">
-                    <a href="#" class="submenu-trigger">Información</a>
-                    <div class="submenu-content">
-                      <a href="#">Historia</a>
-                      <a href="#">Datos</a>
-                    </div>
-                  </div>
-              <div class="submenu">
-                <a href="#" class="submenu-trigger">Tienda</a>
-                <div class="submenu-content">
-                  <a href="articulos.html">Artículos</a>
-                  <a href="club.html">Club</a>
-                </div>
-              </div>
-              <div class="submenu">
-                <a href="#" class="submenu-trigger">Deportes</a>
-                <div class="submenu-content">
-                  <a href="plantelprimera.html">Fut. Profesional</a>
-                  <a href="#">Fut. Amateur</a>
-                  <a href="#">Otras Disciplinas</a>
-                </div>
-              </div>    
+            <div class="login-div">
+                <button class="loginbtn" type="button" onclick="window.location.href='club.html'">
+                    <img src="imagenes/login-image.png" alt="Login Imagen" class="menu-icon">
+                    Ingresar
+                </button>
             </div>
-          </div>
+            <div class="dropdown">
+                <button class="dropbtn" aria-label="Abrir menú" type="button">
+                    <img src="imagenes/menu.png" alt="Menú" class="menu-icon">
+                </button>
+                <div class="dropdown-content">
+                    <a href="index.html">Inicio</a>
+                    <div class="submenu">
+                        <a href="#" class="submenu-trigger">Información ▸</a>
+                        <div class="submenu-content">
+                            <a href="historia.html">Historia</a>
+                            <a href="datos.html">Datos e Instalaciones</a>
+                        </div>
+                    </div>
+                    <div class="submenu">
+                        <a href="#" class="submenu-trigger">Tienda ▸</a>
+                        <div class="submenu-content">
+                            <a href="articulos.html">Artículos</a>
+                            <a href="club.html">Socios y Entradas</a>
+                            <a href="pago.html">Página de Pago</a>
+                        </div>
+                    </div>
+                    <div class="submenu">
+                        <a href="#" class="submenu-trigger">Deportes ▸</a>
+                        <div class="submenu-content">
+                            <a href="plantelprimera.html">Fut. Profesional</a>
+                            <a href="futbolamateur.html">Fut. Amateur</a>
+                            <a href="otrasdisciplinas.html">Otras Disciplinas</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-
-    </div>
-    <div class="titulo-idumentaria">
-        <h2>Indumentaria</h2>
-        <hr class="divisor">
     </div>
 
-        <div class="contenedor-articulos">
+    <div class="tienda-layout">
+        <aside class="barra-tienda">
+            <h3>Buscar en Tienda</h3>
+            <input type="text" id="buscador-tienda" placeholder="Buscar producto...">
+            <button type="button" class="filtro-btn activo" data-cat="todos">Todos los productos</button>
+            <button type="button" class="filtro-btn" data-cat="ropa">Ropa e Indumentaria</button>
+            <button type="button" class="filtro-btn" data-cat="accesorios">Accesorios</button>
+        </aside>
 
-            <div class="imagenes-articulos">
-                <a target="_blank" href="imagenes/camiseta-titular-laferrere.png">
-                    <img src="imagenes/camiseta-titular-laferrere.png" alt="camiseta-titular-laferrere" width="1000" height="1200">
-                </a>
-                <div class="descripcion">
-                    <span >Camiseta titular</span>
-                </div>
-                <div class="precio">   
-                    <span>$62.000,00</span>
+        <div>
+            <div class="detalle-producto-box" id="detalle-producto">
+                <img id="det-img" src="imagenes/camiseta-titular-laferrere.png" alt="Producto Seleccionado">
+                <div class="detalle-info">
+                    <span style="background: #008643; color: white; padding: 3px 8px; border-radius: 4px; font-size: 12px;">Producto Seleccionado</span>
+                    <h2 id="det-nombre">Camiseta titular</h2>
+                    <p id="det-precio" class="precio-socio">$62.000,00</p>
+                    <p>Producto oficial del Club Social y Cultural Deportivo Laferrere. Seleccioná tus opciones para simular la compra:</p>
+
+                    <div class="controles-producto">
+                        <div>
+                            <label for="det-color">Color:</label>
+                            <select id="det-color">
+                                <option value="Verde y Blanco">Verde y Blanco</option>
+                                <option value="Blanco">Blanco</option>
+                                <option value="Verde Oscuro">Verde Oscuro</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="det-talla">Talla:</label>
+                            <select id="det-talla">
+                                <option value="S">S</option>
+                                <option value="M" selected>M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                                <option value="XXL">XXL</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="det-cantidad">Cantidad:</label>
+                            <input type="number" id="det-cantidad" value="1" min="1" max="10">
+                        </div>
+                    </div>
+
+                    <button type="button" class="boton-verde" onclick="irAPagoProducto()">Comprar ahora (Simular pago)</button>
                 </div>
             </div>
 
-            <div class="imagenes-articulos">
-                <a target="_blank" href="imagenes/short-titular-laferrere.png">
-                    <img src="imagenes/short-titular-laferrere.png" alt="short-titular-laferrere" width="1000" height="1200">
-                </a>
-                <div class="descripcion">
-                    <span>Short titular</span>
+            <div class="titulo-idumentaria" style="margin-top: 10px;" id="sec-ropa">
+                <h2>Indumentaria</h2>
+                <hr class="divisor">
+            </div>
+
+            <div class="contenedor-articulos">
+                <div class="imagenes-articulos producto-item" data-categoria="ropa" data-nombre="Camiseta titular" data-precio="62000" data-img="imagenes/camiseta-titular-laferrere.png">
+                    <img src="imagenes/camiseta-titular-laferrere.png" alt="camiseta-titular-laferrere" onclick="seleccionarProducto(this.parentElement)">
+                    <div class="descripcion" onclick="seleccionarProducto(this.parentElement)"><span>Camiseta titular</span></div>
+                    <div class="precio"><span>$62.000,00</span></div>
+                    <button type="button" class="boton-verde" style="width: 100%; font-size: 12px; padding: 7px;" onclick="seleccionarProducto(this.parentElement)">Ver / Elegir</button>
                 </div>
-                <div class="precio">
-                    <span>$36.600,00</span>
+
+                <div class="imagenes-articulos producto-item" data-categoria="ropa" data-nombre="Short titular" data-precio="36600" data-img="imagenes/short-titular-laferrere.png">
+                    <img src="imagenes/short-titular-laferrere.png" alt="short-titular-laferrere" onclick="seleccionarProducto(this.parentElement)">
+                    <div class="descripcion" onclick="seleccionarProducto(this.parentElement)"><span>Short titular</span></div>
+                    <div class="precio"><span>$36.600,00</span></div>
+                    <button type="button" class="boton-verde" style="width: 100%; font-size: 12px; padding: 7px;" onclick="seleccionarProducto(this.parentElement)">Ver / Elegir</button>
+                </div>
+
+                <div class="imagenes-articulos producto-item" data-categoria="ropa" data-nombre="Camiseta suplente" data-precio="62000" data-img="imagenes/camiseta-suplente-laferrere.png">
+                    <img src="imagenes/camiseta-suplente-laferrere.png" alt="camiseta-suplente-laferrere" onclick="seleccionarProducto(this.parentElement)">
+                    <div class="descripcion" onclick="seleccionarProducto(this.parentElement)"><span>Camiseta suplente</span></div>
+                    <div class="precio"><span>$62.000,00</span></div>
+                    <button type="button" class="boton-verde" style="width: 100%; font-size: 12px; padding: 7px;" onclick="seleccionarProducto(this.parentElement)">Ver / Elegir</button>
+                </div>
+
+                <div class="imagenes-articulos producto-item" data-categoria="ropa" data-nombre="Short suplente" data-precio="36600" data-img="imagenes/short-suplente-laferrere.png">
+                    <img src="imagenes/short-suplente-laferrere.png" alt="short-suplente-laferrere" onclick="seleccionarProducto(this.parentElement)">
+                    <div class="descripcion" onclick="seleccionarProducto(this.parentElement)"><span>Short suplente</span></div>
+                    <div class="precio"><span>$36.600,00</span></div>
+                    <button type="button" class="boton-verde" style="width: 100%; font-size: 12px; padding: 7px;" onclick="seleccionarProducto(this.parentElement)">Ver / Elegir</button>
+                </div>
+
+                <div class="imagenes-articulos producto-item" data-categoria="ropa" data-nombre="Pantalon de entrenamiento" data-precio="45600" data-img="imagenes/pantalon-entrenamiento-laferrere.png">
+                    <img src="imagenes/pantalon-entrenamiento-laferrere.png" alt="pantalon-entrenamiento-laferrere" onclick="seleccionarProducto(this.parentElement)">
+                    <div class="descripcion" onclick="seleccionarProducto(this.parentElement)"><span>Pantalon de entrenamiento</span></div>
+                    <div class="precio"><span>$45.600,00</span></div>
+                    <button type="button" class="boton-verde" style="width: 100%; font-size: 12px; padding: 7px;" onclick="seleccionarProducto(this.parentElement)">Ver / Elegir</button>
+                </div>
+
+                <div class="imagenes-articulos producto-item" data-categoria="ropa" data-nombre="Pantalon negro" data-precio="46600" data-img="imagenes/pantalon-negro-laferrere.png">
+                    <img src="imagenes/pantalon-negro-laferrere.png" alt="pantalon-negro-laferrere" onclick="seleccionarProducto(this.parentElement)">
+                    <div class="descripcion" onclick="seleccionarProducto(this.parentElement)"><span>Pantalon negro</span></div>
+                    <div class="precio"><span>$46.600,00</span></div>
+                    <button type="button" class="boton-verde" style="width: 100%; font-size: 12px; padding: 7px;" onclick="seleccionarProducto(this.parentElement)">Ver / Elegir</button>
+                </div>
+
+                <div class="imagenes-articulos producto-item" data-categoria="ropa" data-nombre="Buzo de entrenamiento" data-precio="54000" data-img="imagenes/buzo-entrenamiento-laferrere.png">
+                    <img src="imagenes/buzo-entrenamiento-laferrere.png" alt="buzo-entrenamiento-laferrere" onclick="seleccionarProducto(this.parentElement)">
+                    <div class="descripcion" onclick="seleccionarProducto(this.parentElement)"><span>Buzo de entrenamiento</span></div>
+                    <div class="precio"><span>$54.000,00</span></div>
+                    <button type="button" class="boton-verde" style="width: 100%; font-size: 12px; padding: 7px;" onclick="seleccionarProducto(this.parentElement)">Ver / Elegir</button>
+                </div>
+
+                <div class="imagenes-articulos producto-item" data-categoria="ropa" data-nombre="Buzo canguro" data-precio="68400" data-img="imagenes/buzo-canguro-laferrere.png">
+                    <img src="imagenes/buzo-canguro-laferrere.png" alt="buzo-canguro-laferrere" onclick="seleccionarProducto(this.parentElement)">
+                    <div class="descripcion" onclick="seleccionarProducto(this.parentElement)"><span>Buzo canguro</span></div>
+                    <div class="precio"><span>$68.400,00</span></div>
+                    <button type="button" class="boton-verde" style="width: 100%; font-size: 12px; padding: 7px;" onclick="seleccionarProducto(this.parentElement)">Ver / Elegir</button>
+                </div>
+
+                <div class="imagenes-articulos producto-item" data-categoria="ropa" data-nombre="Campera" data-precio="46400" data-img="imagenes/campera-laferrere.png">
+                    <img src="imagenes/campera-laferrere.png" alt="campera-laferrere" onclick="seleccionarProducto(this.parentElement)">
+                    <div class="descripcion" onclick="seleccionarProducto(this.parentElement)"><span>Campera</span></div>
+                    <div class="precio"><span>$46.400,00</span></div>
+                    <button type="button" class="boton-verde" style="width: 100%; font-size: 12px; padding: 7px;" onclick="seleccionarProducto(this.parentElement)">Ver / Elegir</button>
+                </div>
+
+                <div class="imagenes-articulos producto-item" data-categoria="ropa" data-nombre="Gorra" data-precio="21990" data-img="imagenes/gorra-laferrere.png">
+                    <img src="imagenes/gorra-laferrere.png" alt="gorra-laferrere" onclick="seleccionarProducto(this.parentElement)">
+                    <div class="descripcion" onclick="seleccionarProducto(this.parentElement)"><span>Gorra</span></div>
+                    <div class="precio"><span>$21.990,00</span></div>
+                    <button type="button" class="boton-verde" style="width: 100%; font-size: 12px; padding: 7px;" onclick="seleccionarProducto(this.parentElement)">Ver / Elegir</button>
                 </div>
             </div>
 
-            <div class="imagenes-articulos">
-                <a target="_blank" href="imagenes/camiseta-suplente-laferrere.png">
-                    <img src="imagenes/camiseta-suplente-laferrere.png" alt="camiseta-suplente-laferrere" width="1000" height="1200">
-                </a>
-                <div class="descripcion">
-                    <span>Camiseta suplente</span>
-                </div>
-                <div class="precio">
-                    <span>$62.000,00</span>
-                </div>
+            <div class="titulo-idumentaria" style="margin-top: 35px;" id="sec-accesorios">
+                <h2>Accesorios</h2>
+                <hr class="divisor">
             </div>
 
-            <div class="imagenes-articulos">
-                <a target="_blank" href="imagenes/short-suplente-laferrere.png">
-                    <img src="imagenes/short-suplente-laferrere.png" alt="short-suplente-laferrere" width="1000" height="1200">
-                </a>
-                <div class="descripcion">
-                    <span>Short suplente</span>
+            <div class="contenedor-articulos">
+                <div class="imagenes-articulos producto-item" data-categoria="accesorios" data-nombre="Banderin" data-precio="12500" data-img="imagenes/banderin-laferrere.png">
+                    <img src="imagenes/banderin-laferrere.png" alt="banderin-laferrere" onclick="seleccionarProducto(this.parentElement)">
+                    <div class="descripcion" onclick="seleccionarProducto(this.parentElement)"><span>Banderin</span></div>
+                    <div class="precio"><span>$12.500,00</span></div>
+                    <button type="button" class="boton-verde" style="width: 100%; font-size: 12px; padding: 7px;" onclick="seleccionarProducto(this.parentElement)">Ver / Elegir</button>
                 </div>
-                <div class="precio">
-                    <span>$36.600,00</span>
-                </div>
-            </div>
 
-            <div class="imagenes-articulos">
-                <a target="_blank" href="imagenes/pantalon-entrenamiento-laferrere.png">
-                    <img src="imagenes/pantalon-entrenamiento-laferrere.png" alt="pantalon-entrenamiento-laferrere" width="1000" height="1200">
-                </a>
-                <div class="descripcion">
-                    <span>Pantalon de entrenamiento</span>
+                <div class="imagenes-articulos producto-item" data-categoria="accesorios" data-nombre="Llavero de plastico" data-precio="1500" data-img="imagenes/llavero-plastico-laferrere.png">
+                    <img src="imagenes/llavero-plastico-laferrere.png" alt="llavero-plastico-laferrere" onclick="seleccionarProducto(this.parentElement)">
+                    <div class="descripcion" onclick="seleccionarProducto(this.parentElement)"><span>Llavero de plastico</span></div>
+                    <div class="precio"><span>$1.500,00</span></div>
+                    <button type="button" class="boton-verde" style="width: 100%; font-size: 12px; padding: 7px;" onclick="seleccionarProducto(this.parentElement)">Ver / Elegir</button>
                 </div>
-                <div class="precio">
-                    <span>$45.600,00</span>
-                </div>
-            </div>
 
-            <div class="imagenes-articulos">
-                <a target="_blank" href="imagenes/pantalon-negro-laferrere.png">
-                    <img src="imagenes/pantalon-negro-laferrere.png" alt="pantalon-negro-laferrere" width="1000" height="1200">
-                </a>
-                <div class="descripcion">
-                    <span>Pantalon negro</span>
-                </div>
-                <div class="precio">
-                    <span>$46.600,00</span>
-                </div>
-            </div>
-
-            <div class="imagenes-articulos">
-                <a target="_blank" href="imagenes/buzo-entrenamiento-laferrere.png">
-                    <img src="imagenes/buzo-entrenamiento-laferrere.png" alt="buzo-entrenamiento-laferrere" width="1000" height="1200">
-                </a>
-                <div class="descripcion">
-                    <span>Buzo de entrenamiento</span>
-                </div>
-                <div class="precio">
-                    <span>$54.000,00</span>
-                </div>
-            </div>
-
-            <div class="imagenes-articulos">
-                <a target="_blank" href="imagenes/buzo-canguro-laferrere.png">
-                    <img src="imagenes/buzo-canguro-laferrere.png" alt="buzo-canguro-laferrere" width="1000" height="1200">
-                </a>
-                <div class="descripcion">
-                    <span>Buzo canguro</span>
-                </div>
-                <div class="precio">
-                    <span>$68.400,00</span>
-                </div>
-            </div> 
-
-            <div class="imagenes-articulos">
-                <a target="_blank" href="imagenes/campera-laferrere.png">
-                    <img src="imagenes/campera-laferrere.png" alt="campera-laferrere" width="1000" height="1200">
-                </a>
-                <div class="descripcion">
-                    <span>Campera</span>
-                </div>
-                <div class="precio">
-                    <span>$46.400,00</span>
-                </div>
-            </div>
-			
-			<div class="imagenes-articulos">
-                <a target="_blank" href="imagenes/gorra-laferrere.png">
-                    <img src="imagenes/gorra-laferrere.png" alt="gorra-laferrere" width="1000" height="1200">
-                </a>
-                <div class="descripcion">
-                    <span>Gorra</span>
-                </div>
-                <div class="precio">
-                    <span>$21.990,00</span>
+                <div class="imagenes-articulos producto-item" data-categoria="accesorios" data-nombre="Llavero de metal" data-precio="19800" data-img="imagenes/llavero-metalico-laferrere.png">
+                    <img src="imagenes/llavero-metalico-laferrere.png" alt="llavero-metalico-laferrere" onclick="seleccionarProducto(this.parentElement)">
+                    <div class="descripcion" onclick="seleccionarProducto(this.parentElement)"><span>Llavero de metal</span></div>
+                    <div class="precio"><span>$19.800,00</span></div>
+                    <button type="button" class="boton-verde" style="width: 100%; font-size: 12px; padding: 7px;" onclick="seleccionarProducto(this.parentElement)">Ver / Elegir</button>
                 </div>
             </div>
         </div>
-
     </div>
 
-    <div class="titulo-idumentaria">
-        <h2>Accesorios</h2>
-        <hr class="divisor">
-    </div>
-    <div class="contenedor-articulos">
-        <div class="imagenes-articulos">
-                    <a target="_blank" href="imagenes/banderin-laferrere.png">
-                        <img src="imagenes/banderin-laferrere.png" alt="banderin-laferrere" width="1000" height="1200">
-                    </a>
-                    <div class="descripcion">
-                        <span>Banderin</span>
-                    </div>
-                    <div class="precio">   
-                        <span>$12.500,00</span>
-                    </div>
-        </div>
-
-        <div class="imagenes-articulos">
-                    <a target="_blank" href="imagenes/llavero-plastico-laferrere.png">
-                        <img src="imagenes/llavero-plastico-laferrere.png" alt="llavero-plastico-laferrere" width="1000" height="1200">
-                    </a>
-                    <div class="descripcion">
-                        <span>Llavero de plastico</span>
-                    </div>
-                    <div class="precio">   
-                        <span>$1.500,00</span>
-                    </div>
-        </div>
-
-        <div class="imagenes-articulos">
-                    <a target="_blank" href="imagenes/llavero-metalico-laferrere.png">
-                        <img src="imagenes/llavero-metalico-laferrere.png" alt="llavero-metalico-laferrere" width="1000" height="1200">
-                    </a>
-                    <div class="descripcion">
-                        <span>Llavero de metal</span>
-                    </div>
-                    <div class="precio">   
-                        <span>$19.800,00</span>
-                    </div>
-        </div>
-    </div>   
-    <div class="footer">
-        <p style="font-size: 12px; margin-top:-15px;">
-            Pagina hecha por Blanco Vicente, Colombo Agustin y Gestro Bruno
+    <footer class="footer" id="pie">
+        <p class="creditos">
+            Página hecha por Blanco Vicente, Colombo Agustin y Gestro Bruno
         </p>
+
         <div class="sponsors">
-        <img src="imagenes/sponsor1.png" alt="Sponsor 1">
-
-        <img src="imagenes/sponsor2.png" alt="Sponsor 2">
-       
-		<img src="imagenes/sponsor3.png" alt="Sponsor 3">
-
-        <img src="imagenes/sponsor4.png" alt="Sponsor 4">
+            <img src="imagenes/sponsor1.png" alt="Sponsor 1">
+            <img src="imagenes/sponsor2.png" alt="Sponsor 2">
+            <img src="imagenes/sponsor3.png" alt="Sponsor 3">
+            <img src="imagenes/sponsor4.png" alt="Sponsor 4">
         </div>
-        <p>
-            © 2026 Club Social y Cultural Deportivo Laferrere. Todos los derechos reservados.
-        </p>
-</body>
 
+        <p class="info-legal">
+            <strong>Estadio Ciudad de Laferrere (Rodney y Magnasco)</strong> | <strong>Sede Social (Av. Luro 5728, Gregorio de Laferrere, La Matanza)</strong>
+        </p>
+        <p class="info-legal">
+            Información Legal: Personería Jurídica N° 4120 - Afiliado directamente a la Asociación del Fútbol Argentino (AFA).
+        </p>
+        <a href="#inicio" class="btn-volver-arriba">↑ Volver al principio</a>
+        <p>© 2026 Club Social y Cultural Deportivo Laferrere. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        let productoActual = {
+            nombre: "Camiseta titular",
+            precio: 62000,
+            img: "imagenes/camiseta-titular-laferrere.png"
+        };
+
+        function seleccionarProducto(elemento) {
+            productoActual = {
+                nombre: elemento.dataset.nombre,
+                precio: Number(elemento.dataset.precio),
+                img: elemento.dataset.img
+            };
+            document.getElementById("det-nombre").textContent = productoActual.nombre;
+            document.getElementById("det-precio").textContent = "$" + productoActual.precio.toLocaleString("es-AR") + ",00";
+            document.getElementById("det-img").src = productoActual.img;
+            document.getElementById("detalle-producto").scrollIntoView({ behavior: "smooth" });
+        }
+
+        function irAPagoProducto() {
+            const color = document.getElementById("det-color").value;
+            const talla = document.getElementById("det-talla").value;
+            const cantidad = Math.max(1, Number(document.getElementById("det-cantidad").value));
+            const total = productoActual.precio * cantidad;
+            const detalle = `${productoActual.nombre} (Color: ${color}, Talla: ${talla}) x${cantidad}`;
+            window.location.href = `pago.html?concepto=${encodeURIComponent(detalle)}&total=${total}`;
+        }
+
+        const botonesFiltro = document.querySelectorAll(".filtro-btn");
+        const buscador = document.getElementById("buscador-tienda");
+        const items = document.querySelectorAll(".producto-item");
+        let categoriaActiva = "todos";
+
+        function filtrarTienda() {
+            const texto = buscador.value.toLowerCase();
+            items.forEach(item => {
+                const coincideCat = categoriaActiva === "todos" || item.dataset.categoria === categoriaActiva;
+                const coincideTexto = item.dataset.nombre.toLowerCase().includes(texto);
+                item.style.display = (coincideCat && coincideTexto) ? "flex" : "none";
+            });
+        }
+
+        botonesFiltro.forEach(btn => {
+            btn.addEventListener("click", () => {
+                botonesFiltro.forEach(b => b.classList.remove("activo"));
+                btn.classList.add("activo");
+                categoriaActiva = btn.dataset.cat;
+                filtrarTienda();
+            });
+        });
+
+        buscador.addEventListener("input", filtrarTienda);
+    </script>
+</body>
 </html>

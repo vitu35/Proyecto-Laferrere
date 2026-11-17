@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Pago - Deportivo Laferrere</title>
+    <link rel="stylesheet" href="pago.css">
+</head>
+<body class="fondo" id="inicio">
+    <header class="header">
+        <div class="escudo-contenedor">
+            <img src="imagenes/foto.png" alt="Escudo Deportivo Laferrere">
+            <a href="index.html">
+                <h1 class="nombreClub">Club Social y Cultural Deportivo Laferrere</h1>
+            </a>
+        </div>
+        <div class="menu-container">
+            <div class="dropdown">
+                <button class="dropbtn" aria-label="Abrir menú" type="button">
+                    <img src="imagenes/menu.png" alt="Menú" class="menu-icon">
+                </button>
+
+                <div class="dropdown-content">
+                    <a href="index.html">Inicio</a>
+                    <div class="submenu">
+                        <a href="#" class="submenu-trigger">Información ▸</a>
+                        <div class="submenu-content">
+                            <a href="historia.html">Historia</a>
+                            <a href="datos.html">Datos e Instalaciones</a>
+                        </div>
+                    </div>
+
+                    <div class="submenu">
+                        <a href="#" class="submenu-trigger">Tienda ▸</a>
+                        <div class="submenu-content">
+                            <a href="articulos.html">Artículos</a>
+                            <a href="club.html">Socios y Entradas</a>
+                            <a href="pago.html">Página de Pago</a>
+                        </div>
+                    </div>
+
+                    <div class="submenu">
+                        <a href="#" class="submenu-trigger">Deportes ▸</a>
+                        <div class="submenu-content">
+                            <a href="plantelprimera.html">Fut. Profesional</a>
+                            <a href="futbolamateur.html">Fut. Amateur</a>
+                            <a href="otrasdisciplinas.html">Otras Disciplinas</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="contenedor-principal deportes-principal">
+        <section class="portada-deporte">
+            <h2>Finalizar Compra - Simulación de Pago</h2>
+            <p>Completá tus datos de contacto y seleccioná un medio de pago para confirmar tu operación.</p>
+        </section>
+
+        <section class="seccion-contenido" style="max-width: 750px;">
+            <div class="panel-info">
+                <div class="nota" style="margin-top: 0; margin-bottom: 20px;">
+                    <strong>Resumen de tu operación:</strong><br>
+                    <span id="resumen-concepto">Camiseta titular (Color: Verde y Blanco, Talla: M) x1</span><br>
+                    <strong>Total a abonar: <span id="resumen-total">$62.000,00</span></strong>
+                </div>
+
+                <form id="form-pago">
+                    <h3>1. Información de Contacto</h3>
+                    <div class="campo-form">
+                        <label for="pago-nombre">Nombre y Apellido del Titular:</label>
+                        <input type="text" id="pago-nombre" required placeholder="Ej: Lucas Gómez">
+                    </div>
+                    <div class="campo-form">
+                        <label for="pago-email">Correo Electrónico (para recibir el comprobante/entrada):</label>
+                        <input type="email" id="pago-email" required placeholder="ejemplo@correo.com">
+                    </div>
+                    <div class="campo-form">
+                        <label for="pago-telefono">Teléfono / WhatsApp:</label>
+                        <input type="tel" id="pago-telefono" required placeholder="Ej: 11 5555-4444">
+                    </div>
+
+                    <h3>2. Medio de Pago (Simulación)</h3>
+                    <div class="campo-form">
+                        <label for="medio-pago">Seleccioná el medio de pago:</label>
+                        <select id="medio-pago" onchange="cambiarMedioPago()">
+                            <option value="Tarjeta de Crédito / Débito">Tarjeta de Crédito / Débito</option>
+                            <option value="Transferencia Bancaria / Billetera Virtual">Transferencia Bancaria / Billetera Virtual</option>
+                            <option value="Pago en Efectivo en Sede Social">Pago en Efectivo en Sede Social</option>
+                        </select>
+                    </div>
+
+                    <div id="datos-tarjeta">
+                        <div class="campo-form">
+                            <label for="num-tarjeta">Número de Tarjeta (Simulado):</label>
+                            <input type="text" id="num-tarjeta" maxlength="19" placeholder="4509 0000 0000 1234" required>
+                        </div>
+                        <div style="display: flex; gap: 15px;">
+                            <div class="campo-form" style="flex: 1;">
+                                <label for="vencimiento">Vencimiento:</label>
+                                <input type="text" id="vencimiento" maxlength="5" placeholder="MM/AA" required>
+                            </div>
+                            <div class="campo-form" style="flex: 1;">
+                                <label for="cvv">Código de Seguridad:</label>
+                                <input type="text" id="cvv" maxlength="4" placeholder="123" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="boton-verde" style="width: 100%; font-size: 16px; margin-top: 10px;">
+                        Confirmar Pago y Completar Compra
+                    </button>
+                </form>
+
+                <div id="confirmacion-compra" class="nota" style="display: none; margin-top: 20px;"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" id="pie">
+        <p class="creditos">
+            Página hecha por Blanco Vicente, Colombo Agustin y Gestro Bruno
+        </p>
+
+        <div class="sponsors">
+            <img src="imagenes/sponsor1.png" alt="Sponsor 1">
+            <img src="imagenes/sponsor2.png" alt="Sponsor 2">
+            <img src="imagenes/sponsor3.png" alt="Sponsor 3">
+            <img src="imagenes/sponsor4.png" alt="Sponsor 4">
+        </div>
+
+        <p class="info-legal">
+            <strong>Estadio Ciudad de Laferrere (Rodney y Magnasco)</strong> | <strong>Sede Social (Av. Luro 5728, Gregorio de Laferrere, La Matanza)</strong>
+        </p>
+        <p class="info-legal">
+            Información Legal: Personería Jurídica N° 4120 - Afiliado directamente a la Asociación del Fútbol Argentino (AFA).
+        </p>
+        <a href="#inicio" class="btn-volver-arriba">↑ Volver al principio</a>
+        <p>© 2026 Club Social y Cultural Deportivo Laferrere. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const concepto = params.get("concepto") || "Camiseta titular (Color: Verde y Blanco, Talla: M) x1";
+        const total = Number(params.get("total") || 62000);
+
+        document.getElementById("resumen-concepto").textContent = concepto;
+        document.getElementById("resumen-total").textContent = "$" + total.toLocaleString("es-AR") + ",00";
+
+        function cambiarMedioPago() {
+            const medio = document.getElementById("medio-pago").value;
+            const boxTarjeta = document.getElementById("datos-tarjeta");
+            const inputs = boxTarjeta.querySelectorAll("input");
+            if (medio === "Tarjeta de Crédito / Débito") {
+                boxTarjeta.style.display = "block";
+                inputs.forEach(i => i.required = true);
+            } else {
+                boxTarjeta.style.display = "none";
+                inputs.forEach(i => i.required = false);
+            }
+        }
+
+        document.getElementById("form-pago").addEventListener("submit", function(e) {
+            e.preventDefault();
+            const nombre = document.getElementById("pago-nombre").value;
+            const email = document.getElementById("pago-email").value;
+            const tel = document.getElementById("pago-telefono").value;
+            const medio = document.getElementById("medio-pago").value;
+            const codigoOperacion = "LAFE-" + Math.floor(100000 + Math.random() * 900000);
+
+            const box = document.getElementById("confirmacion-compra");
+            box.style.display = "block";
+            box.innerHTML = `
+                <h3 style="margin-top:0; color:#008643;">¡Compra Confirmada con Éxito!</h3>
+                <p><strong>Código de operación:</strong> ${codigoOperacion}</p>
+                <p><strong>Titular:</strong> ${nombre} | <strong>Contacto:</strong> ${email} / ${tel}</p>
+                <p><strong>Detalle:</strong> ${concepto}</p>
+                <p><strong>Total abonado:</strong> $${total.toLocaleString("es-AR")},00 (${medio})</p>
+                <p>Enviamos el comprobante digital a tu correo electrónico. ¡Gracias por apoyar al Villero!</p>
+                <a href="index.html" class="boton-verde">Volver a la Página Principal</a>
+            `;
+            this.style.display = "none";
+        });
+    </script>
+</body>
+</html>
