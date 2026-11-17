@@ -294,6 +294,7 @@
     text-decoration-thickness: 1px;
     text-decoration-style: double;
     text-decoration-color: white;
+    text-underline-offset: 5px;
 }
 .numerostitulos  h2 {
     font-size: 20px;
@@ -306,6 +307,7 @@
 }
 .numerostitulos a:hover {
     text-decoration: underline;
+    text-underline-offset: 5px;
 }
 .numerostitulos img {
     width: 60px;
@@ -351,10 +353,12 @@
     object-fit: contain;
     background-color: #008643;
     border-radius: 50%;
+    transition: background-color 0.6 ease-in-out;
 }
 
 .numerosredes img:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
+    background-color: white;
     transition: transform 0.2s ease-in-out;
 }
 
