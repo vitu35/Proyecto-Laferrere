@@ -1,0 +1,630 @@
+html, body {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    font-style: oblique;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    background-color: #05d66df8;
+    color: white;
+    height: 35px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    overflow: visible;
+    transition: height 0.4s ease;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    border-bottom: 4px solid #008643;
+}
+
+.header:hover {
+    height: 100px;
+}
+
+.nombreClub {
+    display: block;
+    width: 170px;
+    margin: 0;
+    font-size: medium;
+    line-height: 1.2;
+    font-style: italic;
+    text-align: left;
+    color: white;
+}
+
+.escudo-contenedor a {
+    text-decoration: none;
+}
+
+.escudo-contenedor a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+.escudo-contenedor {
+    width: 350px;
+    height: 80px;
+    padding-left: 10px;
+    border-radius: 6px;
+    float: left;
+    margin-right: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 7px;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.header:hover .escudo-contenedor {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.escudo-contenedor img {
+    width: 130px;
+    height: 130px;
+    object-fit: contain;
+}
+
+.escudo-contenedor img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.menu-container {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-family: Arial, sans-serif;
+    z-index: 200;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-15px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+}
+
+.header:hover .menu-container,
+.header:focus-within .menu-container {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropbtn {
+    background-color: transparent;
+    padding: 2px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.dropbtn:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 6px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: auto;
+    min-width: 220px;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    z-index: 1000;
+    padding: 5px 0;
+}
+
+.dropdown:hover > .dropdown-content,
+.dropdown:focus-within > .dropdown-content {
+    display: block;
+}
+
+.submenu {
+    position: relative;
+}
+
+.dropdown-content a {
+    display: block;
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.dropdown-content a:hover {
+    background-color: #05d66df8;
+    color: #fff;
+    font-weight: bold;
+}
+
+.submenu-content {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 100%;
+    left: auto;
+    min-width: 180px;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    padding: 5px 0;
+    z-index: 1001;
+}
+
+.submenu:hover > .submenu-content,
+.submenu:focus-within > .submenu-content {
+    display: block;
+}
+
+.submenu-trigger {
+    cursor: pointer;
+}
+
+.menu-icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.contenedor-principal {
+    margin-top: 35px;
+    margin-bottom: 40px;
+    flex: 1;
+    width: 100%;
+}
+
+.deportes-principal {
+    padding-bottom: 30px;
+}
+
+.portada-deporte {
+    width: 90%;
+    max-width: 1200px;
+    margin: 90px auto 35px;
+    padding: 30px;
+    background-color: white;
+    border: 2px solid #008643;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+    text-align: center;
+}
+
+.portada-deporte h2 {
+    margin-top: 0;
+    color: #008643;
+    font-size: 30px;
+}
+
+.portada-deporte p {
+    color: #444;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.disciplinas-layout {
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr);
+    gap: 25px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 35px auto;
+    align-items: start;
+}
+
+.barra-disciplinas {
+    position: sticky;
+    top: 120px;
+    padding: 20px;
+    background-color: white;
+    border: 2px solid #008643;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.barra-disciplinas h3 {
+    margin: 0 0 15px;
+    padding-bottom: 10px;
+    color: #008643;
+    text-align: center;
+    border-bottom: 2px solid #05a653;
+}
+
+.barra-disciplinas a {
+    display: block;
+    margin: 7px 0;
+    padding: 10px;
+    color: #333;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.barra-disciplinas a:hover {
+    background-color: #008643;
+    color: white;
+}
+
+.contenido-disciplinas {
+    min-width: 0;
+}
+
+.bloque-disciplina {
+    margin-bottom: 25px;
+    padding: 25px;
+    background-color: white;
+    border: 2px solid #008643;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    scroll-margin-top: 120px;
+}
+
+.bloque-disciplina h2 {
+    margin-top: 0;
+    padding-bottom: 10px;
+    color: #008643;
+    text-align: center;
+    border-bottom: 2px solid #05a653;
+}
+
+.bloque-disciplina h3 {
+    margin-top: 20px;
+    color: #008643;
+}
+
+.bloque-disciplina p {
+    color: #444;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.bloque-disciplina ul {
+    padding-left: 25px;
+    color: #444;
+    line-height: 1.8;
+}
+
+.seccion-contenido {
+    width: 90%;
+    max-width: 1200px;
+    margin: 35px auto;
+    scroll-margin-top: 115px;
+}
+
+.subtitulo-seccion {
+    margin: 0 0 15px;
+    padding-bottom: 8px;
+    color: #008643;
+    font-size: 24px;
+    text-align: center;
+    border-bottom: 2px solid #05a653;
+}
+
+.panel-info {
+    padding: 25px;
+    background-color: white;
+    border: 2px solid #008643;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #444;
+    line-height: 1.7;
+}
+
+.panel-info p {
+    margin: 10px 0 15px;
+    font-size: 15px;
+}
+
+.nota {
+    margin-top: 25px;
+    padding: 15px;
+    background-color: #e8f8ee;
+    border-left: 4px solid #008643;
+    border-radius: 5px;
+    color: #444;
+}
+
+.boton-verde {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 11px 20px;
+    background-color: #008643;
+    color: white !important;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.boton-verde:hover {
+    background-color: #05a653;
+    color: white !important;
+    transform: translateY(-2px);
+}
+
+#pantalla-carga {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: 9999;
+    animation: desaparecer 1s ease forwards;
+    animation-delay: 2s;
+}
+
+#pantalla-carga::before {
+    content: "";
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    top: -25%;
+    left: -25%;
+    background: linear-gradient(120deg, transparent, #008744, #00a653, white, #008744, transparent);
+    opacity: 0.35;
+    transform: rotate(-10deg);
+    animation: cascada 3s linear infinite;
+}
+
+#pantalla-carga::after {
+    content: "";
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    top: -25%;
+    left: -25%;
+    background: linear-gradient(120deg, transparent, #008744, white, #008744, transparent);
+    opacity: 0.2;
+    transform: rotate(-10deg);
+    animation: cascada 3s linear infinite;
+    animation-delay: 1.5s;
+}
+
+.loader-contenido {
+    position: relative;
+    z-index: 2;
+}
+
+.loader-escudo {
+    display: block;
+    width: 170px;
+    max-width: 70vw;
+    height: auto;
+    animation: palpitar 1.5s ease-in-out infinite;
+}
+
+@keyframes cascada {
+    0% { transform: translateY(0%) rotate(-10deg); }
+    100% { transform: translateY(20%) rotate(10deg); }
+}
+
+@keyframes palpitar {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+    100% { transform: scale(1); }
+}
+
+@keyframes desaparecer {
+    0% { opacity: 1; visibility: visible; }
+    100% { opacity: 0; visibility: hidden; pointer-events: none; }
+}
+
+.footer {
+    background-color: #008643;
+    color: white;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px 20px 15px;
+    margin-top: auto;
+    border-top: 3px solid #05d66df8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.sponsors {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.sponsors img {
+    height: 80px;
+    width: 100px;
+    object-fit: contain;
+    border-radius: 5px;
+    display: block;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 10px;
+    line-height: 1.5;
+    text-align: center;
+    width: 100%;
+}
+
+.footer .creditos {
+    font-size: 12px;
+}
+
+.footer .info-legal {
+    font-size: 11px;
+    color: #e8f8ee;
+}
+
+.btn-volver-arriba {
+    background-color: white;
+    color: #008643;
+    border: 2px solid #00a653;
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-volver-arriba:hover {
+    background-color: #00a653;
+    color: white;
+}
+
+@media (max-width: 900px) {
+    .portada-deporte {
+        width: 94%;
+        padding: 22px;
+    }
+    .seccion-contenido {
+        width: 94%;
+    }
+    .disciplinas-layout {
+        width: 94%;
+        grid-template-columns: 190px minmax(0, 1fr);
+        gap: 15px;
+    }
+    .sponsors {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+    .escudo-contenedor {
+        width: calc(100% - 65px);
+        padding-left: 0;
+        gap: 5px;
+    }
+    .escudo-contenedor img {
+        width: 65px;
+        height: 65px;
+    }
+    .nombreClub {
+        width: auto;
+        max-width: 180px;
+        font-size: 12px;
+    }
+    .menu-container {
+        right: 10px;
+    }
+    .dropbtn {
+        margin-top: 0;
+    }
+    .menu-icon {
+        width: 32px;
+        height: 32px;
+    }
+    .dropdown-content {
+        min-width: 190px;
+    }
+    .submenu-content {
+        min-width: 160px;
+    }
+    .portada-deporte {
+        margin-top: 65px;
+        padding: 18px;
+    }
+    .portada-deporte h2 {
+        font-size: 24px;
+    }
+    .portada-deporte p {
+        font-size: 14px;
+    }
+    .seccion-contenido {
+        width: 94%;
+        margin: 25px auto;
+    }
+    .subtitulo-seccion {
+        font-size: 21px;
+    }
+    .panel-info {
+        padding: 16px;
+    }
+    .panel-info p {
+        font-size: 14px;
+    }
+    .disciplinas-layout {
+        display: flex;
+        flex-direction: column;
+        width: 94%;
+    }
+    .barra-disciplinas {
+        position: static;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+    }
+    .barra-disciplinas h3 {
+        width: 100%;
+    }
+    .barra-disciplinas a {
+        margin: 3px;
+        padding: 9px 12px;
+        font-size: 13px;
+    }
+    .contenido-disciplinas {
+        width: 100%;
+    }
+    .bloque-disciplina {
+        padding: 17px;
+        scroll-margin-top: 60px;
+    }
+    .bloque-disciplina p {
+        font-size: 14px;
+    }
+    .sponsors {
+        gap: 15px;
+    }
+    .sponsors img {
+        width: 70px;
+        height: 55px;
+    }
+}
