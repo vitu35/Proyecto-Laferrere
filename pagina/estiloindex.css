@@ -68,11 +68,13 @@
 .noticia-texto h2 {
     margin: 0 0 6px;
     font-size: 21px;
+    color: white;
 }
 
 .noticia-texto p {
     margin: 0;
     font-size: 12px;
+    color: white;
 }
 
 .noticiasindicadores {
@@ -259,7 +261,7 @@
 .numerosestilo {
     width: 100%;
     height: 100%;
-    margin: 20px 0 ;
+    margin: 60px 0 ;
     box-sizing: content-box;
     background-color: #00a653;
     display: flex;
@@ -338,6 +340,7 @@
     border-radius: 10px 0 0 0;
     text-align: center;
     border-bottom: 5px solid #034524;
+    margin-top: 20px;
 }
 
 .numerosredes > a,
@@ -377,4 +380,110 @@
     color: #034725;
     font-size: 15px;
     margin: 0;
+}
+
+.tiendaestilo {
+    position: relative;
+    flex-shrink: 0;
+    width: 100%;
+    height: 320px;
+    margin: 0 0 80px;
+    overflow: hidden;
+    box-sizing: border-box;
+    background-color: #008643;
+    border-top: 5px solid #034524;
+    border-bottom: 5px solid #034524;
+    mask: linear-gradient(90deg, #0000, #000 15% 85%, #0000);
+}
+
+.tiendaestilo .vertical {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    width: max-content;
+    height: 100%;
+    align-items: stretch;
+}
+
+.tiendaestilo .identidad-grupo {
+    display: flex;
+    flex: 0 0 auto;
+    height: 100%;
+    align-items: center;
+    gap: 20px;
+    padding: 16px 10px;
+    box-sizing: border-box;
+}
+
+.tiendaestilo .identidad-grupo > a {
+    display: block;
+    flex: 0 0 auto;
+    height: 100%;
+}
+
+.tiendaestilo .identidad-grupo img {
+    display: block;
+    flex: 0 0 auto;
+    width: auto;
+    height: 100%;
+    max-width: none;
+    margin: 0;
+    object-fit: contain;
+    border-radius: 10px;
+    transition: transform 0.2s ease-in-out, background-color 0.4s ease-in-out;
+}
+
+.tiendaestilo .identidad-grupo > a:hover img,
+.tiendaestilo .identidad-grupo > a:focus-visible img {
+    transform: scale(1.1);
+    background-color: #034524;
+}
+
+.tiendaestilo .vertical.tiendaestilo-moviendo {
+    animation: tiendaestilo-desplazamiento var(--tiendaestilo-duracion, 45s) linear infinite;
+    will-change: transform;
+}
+
+.tiendaestilo:hover .vertical,
+.tiendaestilo:focus-within .vertical {
+    animation-play-state: paused;
+}
+
+@keyframes tiendaestilo-desplazamiento {
+    from {
+        transform: translateX(var(--tiendaestilo-inicio));
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .tiendaestilo .vertical.tiendaestilo-moviendo {
+        animation-duration: 90s;
+    }
+}
+
+@media (max-width: 600px) {
+    .tiendaestilo {
+        height: 240px;
+    }
+
+    .tiendaestilo .identidad-grupo {
+        gap: 12px;
+        padding: 12px 8px;
+    }
+}
+
+.tiendatitulo {
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    background-color: #008643;
+    padding: 10px 0;
+    border-top: 5px solid #034524;
+    margin-top: 50px;
 }
