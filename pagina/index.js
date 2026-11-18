@@ -192,3 +192,40 @@ document.addEventListener("DOMContentLoaded", () => {
     configureIdentityCarousel();
     window.addEventListener("resize", configureIdentityCarousel);
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const carousel = document.querySelector(".tiendaestilo");
+    const track = carousel?.querySelector(".vertical");
+    const originalGroup = track?.querySelector(".identidad-grupo");
+    if (!carousel || !track || !originalGroup) return;
+
+    function configureStoreCarousel() {
+        track.classList.remove("tiendaestilo-moviendo");
+        track.querySelectorAll(".identidad-grupo[data-clone]").forEach((clone) => clone.remove());
+
+        const groupWidth = originalGroup.getBoundingClientRect().width;
+        if (groupWidth <= 0) return;
+
+        const groupCount = Math.ceil(carousel.clientWidth / groupWidth) + 1;
+        for (let index = 1; index < groupCount; index += 1) {
+            const clone = originalGroup.cloneNode(true);
+            clone.dataset.clone = "true";
+            clone.setAttribute("aria-hidden", "true");
+            clone.querySelectorAll("a").forEach((link) => {
+                link.tabIndex = -1;
+            });
+            clone.querySelectorAll("img").forEach((image) => {
+                image.alt = "";
+            });
+            track.appendChild(clone);
+        }
+
+        track.style.setProperty("--tiendaestilo-inicio", `-${groupWidth}px`);
+        track.style.setProperty("--tiendaestilo-duracion", `${Math.max(45, groupWidth / 40)}s`);
+        track.offsetWidth;
+        track.classList.add("tiendaestilo-moviendo");
+    }
+
+    window.addEventListener("load", configureStoreCarousel, { once: true });
+    window.addEventListener("resize", configureStoreCarousel);
+});
