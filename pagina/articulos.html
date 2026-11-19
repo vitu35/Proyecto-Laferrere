@@ -22,36 +22,48 @@
             </a>
         </div>
 
+        <div class="redes">
+            <a href="https://www.facebook.com/people/Club-Social-y-Cultural-Deportivo-Laferrere/61553932042309/" target="_blank">
+                <img src="imagenes/facebook.png" alt="Facebook" class="iconos">
+            </a>
+            <a href="https://www.instagram.com/lafeoficial" target="_blank">
+                <img src="imagenes/ig.webp" alt="Instagram" class="iconos">
+            </a>
+            <a href="https://x.com/LafeOficial" target="_blank">
+                <img src="imagenes/twitter.png" alt="Twitter" class="iconos">
+            </a>
+            <a href="https://www.tiktok.com/@deplaferrereoficial" target="_blank">
+                <img src="imagenes/tiktok.png" alt="TikTok" class="iconos">
+            </a>
+            <a href="https://www.youtube.com/@LafeOficial" target="_blank">
+                <img src="imagenes/youtube.png" alt="YouTube" class="iconos">
+            </a>
+        </div>
+
         <div class="menu-container">
-            <div class="login-div">
-                <button class="loginbtn" type="button" onclick="window.location.href='club.html'">
-                    <img src="imagenes/login-image.png" alt="Login Imagen" class="menu-icon">
-                    Ingresar
-                </button>
-            </div>
             <div class="dropdown">
-                <button class="dropbtn" aria-label="Abrir menú" type="button">
-                    <img src="imagenes/menu.png" alt="Menú" class="menu-icon">
+                <button class="dropbtn" aria-label="Abrir menu" type="button">
+                    <img src="imagenes/menu.png" alt="Menu" class="menu-icon">
                 </button>
                 <div class="dropdown-content">
                     <a href="index.html">Inicio</a>
                     <div class="submenu">
-                        <a href="#" class="submenu-trigger">Información ▸</a>
+                        <a href="#" class="submenu-trigger">Informacion</a>
                         <div class="submenu-content">
                             <a href="historia.html">Historia</a>
                             <a href="datos.html">Datos e Instalaciones</a>
                         </div>
                     </div>
                     <div class="submenu">
-                        <a href="#" class="submenu-trigger">Tienda ▸</a>
+                        <a href="#" class="submenu-trigger">Tienda</a>
                         <div class="submenu-content">
-                            <a href="articulos.html">Artículos</a>
+                            <a href="articulos.html">Articulos</a>
                             <a href="club.html">Socios y Entradas</a>
-                            <a href="pago.html">Página de Pago</a>
+                            <a href="pago.html">Pagina de Pago</a>
                         </div>
                     </div>
                     <div class="submenu">
-                        <a href="#" class="submenu-trigger">Deportes ▸</a>
+                        <a href="#" class="submenu-trigger">Deportes</a>
                         <div class="submenu-content">
                             <a href="plantelprimera.html">Fut. Profesional</a>
                             <a href="futbolamateur.html">Fut. Amateur</a>
@@ -79,17 +91,9 @@
                     <span style="background: #008643; color: white; padding: 3px 8px; border-radius: 4px; font-size: 12px;">Producto Seleccionado</span>
                     <h2 id="det-nombre">Camiseta titular</h2>
                     <p id="det-precio" class="precio-socio">$62.000,00</p>
-                    <p>Producto oficial del Club Social y Cultural Deportivo Laferrere. Seleccioná tus opciones para simular la compra:</p>
+                    <p>Producto oficial del Club Social y Cultural Deportivo Laferrere. Selecciona tus opciones para simular la compra:</p>
 
                     <div class="controles-producto">
-                        <div>
-                            <label for="det-color">Color:</label>
-                            <select id="det-color">
-                                <option value="Verde y Blanco">Verde y Blanco</option>
-                                <option value="Blanco">Blanco</option>
-                                <option value="Verde Oscuro">Verde Oscuro</option>
-                            </select>
-                        </div>
                         <div>
                             <label for="det-talla">Talla:</label>
                             <select id="det-talla">
@@ -218,25 +222,18 @@
     </div>
 
     <footer class="footer" id="pie">
-        <p class="creditos">
-            Página hecha por Blanco Vicente, Colombo Agustin y Gestro Bruno
+        <p style="font-size: 12px; margin-top:-15px;">
+            Pagina hecha por Blanco Vicente, Colombo Agustin y Gestro Bruno
         </p>
-
         <div class="sponsors">
             <img src="imagenes/sponsor1.png" alt="Sponsor 1">
             <img src="imagenes/sponsor2.png" alt="Sponsor 2">
             <img src="imagenes/sponsor3.png" alt="Sponsor 3">
             <img src="imagenes/sponsor4.png" alt="Sponsor 4">
         </div>
-
-        <p class="info-legal">
-            <strong>Estadio Ciudad de Laferrere (Rodney y Magnasco)</strong> | <strong>Sede Social (Av. Luro 5728, Gregorio de Laferrere, La Matanza)</strong>
+        <p>
+            © 2026 Club Social y Cultural Deportivo Laferrere. Todos los derechos reservados.
         </p>
-        <p class="info-legal">
-            Información Legal: Personería Jurídica N° 4120 - Afiliado directamente a la Asociación del Fútbol Argentino (AFA).
-        </p>
-        <a href="#inicio" class="btn-volver-arriba">↑ Volver al principio</a>
-        <p>© 2026 Club Social y Cultural Deportivo Laferrere. Todos los derechos reservados.</p>
     </footer>
 
     <script>
@@ -259,21 +256,24 @@
         }
 
         function irAPagoProducto() {
-            const color = document.getElementById("det-color").value;
             const talla = document.getElementById("det-talla").value;
             const cantidad = Math.max(1, Number(document.getElementById("det-cantidad").value));
             const total = productoActual.precio * cantidad;
-            const detalle = `${productoActual.nombre} (Color: ${color}, Talla: ${talla}) x${cantidad}`;
+            const detalle = `${productoActual.nombre} (Talla: ${talla}) x${cantidad}`;
             window.location.href = `pago.html?concepto=${encodeURIComponent(detalle)}&total=${total}`;
         }
 
         const botonesFiltro = document.querySelectorAll(".filtro-btn");
         const buscador = document.getElementById("buscador-tienda");
         const items = document.querySelectorAll(".producto-item");
+        const tituloRopa = document.getElementById("sec-ropa");
+        const tituloAccesorios = document.getElementById("sec-accesorios");
         let categoriaActiva = "todos";
 
         function filtrarTienda() {
             const texto = buscador.value.toLowerCase();
+            tituloRopa.style.display = categoriaActiva === "accesorios" ? "none" : "block";
+            tituloAccesorios.style.display = categoriaActiva === "ropa" ? "none" : "block";
             items.forEach(item => {
                 const coincideCat = categoriaActiva === "todos" || item.dataset.categoria === categoriaActiva;
                 const coincideTexto = item.dataset.nombre.toLowerCase().includes(texto);
