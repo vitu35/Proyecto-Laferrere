@@ -1,607 +1,282 @@
-html, body {
-    height: 100%;
-    scroll-behavior: smooth;
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Otras Disciplinas - Deportivo Laferrere</title>
+    <link rel="stylesheet" href="otrasdisciplinas.css">
+</head>
 
-* {
-    box-sizing: border-box;
-}
+<body id="inicio">
+    <div id="pantalla-carga">
+        <div class="loader-contenido">
+            <img src="imagenes/foto.png" alt="Deportivo Laferrere" class="loader-escudo">
+        </div>
+    </div>
 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    font-style: oblique;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
+    <header class="header">
+        <div class="escudo-contenedor">
+            <img src="imagenes/foto.png" alt="Escudo Deportivo Laferrere">
+            <a href="index.html">
+                <h1 class="nombreClub">Club Social y Cultural Deportivo Laferrere</h1>
+            </a>
+        </div>
 
-.header {
-    background-color: #05d66df8;
-    color: white;
-    height: 35px;
-    padding: 10px 20px;
-    box-sizing: border-box;
-    overflow: visible;
-    transition: height 0.4s ease;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 100;
-    border-bottom: 4px solid #008643;
-}
+        <div class="menu-container">
+            <div class="dropdown">
+                <button class="dropbtn" aria-label="Abrir menú" type="button">
+                    <img src="imagenes/menu.png" alt="Menú" class="menu-icon">
+                </button>
 
-.header:hover {
-    height: 100px;
-}
+                <div class="dropdown-content">
+                    <a href="index.html">Inicio</a>
+                    <div class="submenu">
+                        <a href="#" class="submenu-trigger">Información ▸</a>
+                        <div class="submenu-content">
+                            <a href="historia.html">Historia</a>
+                            <a href="datos.html">Datos e Instalaciones</a>
+                        </div>
+                    </div>
 
-.nombreClub {
-    display: block;
-    width: 170px;
-    margin: 0;
-    font-size: medium;
-    line-height: 1.2;
-    font-style: italic;
-    text-align: left;
-    color: white;
-}
+                    <div class="submenu">
+                        <a href="#" class="submenu-trigger">Tienda ▸</a>
+                        <div class="submenu-content">
+                            <a href="articulos.html">Artículos</a>
+                            <a href="club.html">Socios y Entradas</a>
+                            <a href="pago.html">Página de Pago</a>
+                        </div>
+                    </div>
 
-.escudo-contenedor a {
-    text-decoration: none;
-}
+                    <div class="submenu">
+                        <a href="#" class="submenu-trigger">Deportes ▸</a>
+                        <div class="submenu-content">
+                            <a href="plantelprimera.html">Fut. Profesional</a>
+                            <a href="futbolamateur.html">Fut. Amateur</a>
+                            <a href="otrasdisciplinas.html">Otras Disciplinas</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
-.escudo-contenedor a:hover {
-    text-decoration: underline;
-    color: white;
-}
+    <main class="contenedor-principal deportes-principal">
 
-.escudo-contenedor {
-    width: 350px;
-    height: 80px;
-    padding-left: 10px;
-    border-radius: 6px;
-    float: left;
-    margin-right: 10px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 7px;
-    opacity: 0;
-    transform: translateY(-20px);
-    transition: opacity 0.2s ease, transform 0.2s ease;
-}
+        <section class="portada-deporte">
+            <h2>Otras disciplinas</h2>
+            <p>
+                Deportivo Laferrere es una institución social y deportiva
+                que reúne distintas actividades para la comunidad. Además
+                del fútbol, los deportes permiten que personas de diferentes
+                edades participen, entrenen y compartan experiencias.
+            </p>
+            <p>
+                Cada disciplina tiene sus propias reglas y formas de entrenamiento,
+                pero todas promueven valores como el respeto, la responsabilidad
+                y el trabajo en equipo.
+            </p>
+        </section>
 
-.header:hover .escudo-contenedor {
-    opacity: 1;
-    transform: translateY(0);
-}
+        <div class="disciplinas-layout">
 
-.escudo-contenedor img {
-    width: 130px;
-    height: 130px;
-    object-fit: contain;
-}
+            <aside class="barra-disciplinas">
+                <h3>Disciplinas</h3>
+                <a href="#voley">Vóley</a>
+                <a href="#handball">Handball</a>
+                <a href="#hockey">Hockey</a>
+                <a href="#baby">Baby fútbol</a>
+                <a href="#bochas">Bochas</a>
+                <a href="#artes-marciales">Artes marciales</a>
+            </aside>
 
-.escudo-contenedor img:hover {
-    transform: scale(1.1);
-    transition: transform 0.3s ease;
-}
+            <div class="contenido-disciplinas">
 
-.menu-container {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-family: Arial, sans-serif;
-    z-index: 200;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-15px);
-    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
-}
+                <section class="bloque-disciplina" id="voley">
+                    <h2>Vóley</h2>
+                    <div class="nota">
+                        <strong>Participación en el club:</strong> Desde 1998 (28 años de trayectoria) | <strong>Liga:</strong> Federación Metropolitana de Vóley (FMV) | <strong>Actualidad:</strong> 4° puesto en la Zona Campeonato y clasificación a playoffs en categorías juveniles.
+                    </div>
+                    <p>
+                        El vóley es un deporte de equipo en el que dos conjuntos
+                        se enfrentan separados por una red. El objetivo es enviar
+                        la pelota al campo contrario y evitar que toque el suelo
+                        del propio equipo.
+                    </p>
+                    <p>
+                        En los entrenamientos se practican el saque, la recepción,
+                        el armado, el remate y el bloqueo. También se trabaja
+                        la coordinación y la comunicación entre los jugadores.
+                    </p>
 
-.header:hover .menu-container,
-.header:focus-within .menu-container {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
+                    <h3>Categorías</h3>
+                    <ul>
+                        <li>Sub 12 femenino</li>
+                        <li>Sub 13 femenino</li>
+                        <li>Sub 14 femenino</li>
+                        <li>Sub 15 femenino</li>
+                        <li>Sub 16 femenino</li>
+                        <li>Sub 18 femenino</li>
+                        <li>Sub 21 femenino</li>
+                        <li>Maxivóley masculino</li>
+                    </ul>
 
-.dropbtn {
-    background-color: transparent;
-    padding: 2px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
-}
+                    <p>
+                        Las categorías formativas permiten que las jugadoras
+                        aprendan y progresen de acuerdo con su edad y experiencia.
+                        La participación en torneos también ayuda a sumar
+                        experiencia y mejorar el rendimiento.
+                    </p>
+                </section>
 
-.dropbtn:hover {
-    background-color: rgba(0, 0, 0, 0.4);
-    border-radius: 6px;
-}
+                <section class="bloque-disciplina" id="handball">
+                    <h2>Handball</h2>
+                    <div class="nota">
+                        <strong>Participación en el club:</strong> Desde 2005 (21 años de trayectoria) | <strong>Liga:</strong> Federación Metropolitana de Balonmano (Fe.Me.Bal.) | <strong>Actualidad:</strong> Peleando los primeros puestos en Tercera División con invicto de local.
+                    </div>
+                    <p>
+                        El handball es un deporte colectivo en el que los equipos
+                        buscan convertir goles lanzando una pelota con las manos.
+                        Se caracteriza por su velocidad, los pases y los movimientos
+                        constantes de ataque y defensa.
+                    </p>
+                    <p>
+                        Durante las prácticas se trabajan los lanzamientos,
+                        la recepción, los desplazamientos, la defensa y las
+                        estrategias para avanzar hacia el arco contrario.
+                    </p>
+                    <p>
+                        Es una actividad que desarrolla la coordinación,
+                        la resistencia física y la comunicación entre compañeros.
+                    </p>
+                </section>
 
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
+                <section class="bloque-disciplina" id="hockey">
+                    <h2>Hockey</h2>
+                    <div class="nota">
+                        <strong>Participación en el club:</strong> Desde 2011 (15 años de trayectoria) | <strong>Liga:</strong> Asociación Amateur de Hockey de Buenos Aires (AHBA) | <strong>Actualidad:</strong> Gran crecimiento en tira juvenil y Primera Damas ubicadas en mitad de tabla superior.
+                    </div>
+                    <p>
+                        El hockey es un deporte de equipo en el que los jugadores
+                        utilizan un palo para conducir y golpear una pelota
+                        con el objetivo de marcar goles.
+                    </p>
+                    <p>
+                        Los entrenamientos incluyen ejercicios de conducción,
+                        pases, recepción, control de pelota y situaciones
+                        de juego. También se trabaja la preparación física
+                        y la ubicación dentro de la cancha.
+                    </p>
+                    <p>
+                        Las categorías formativas permiten aprender las técnicas
+                        básicas y avanzar progresivamente hacia la competencia.
+                    </p>
+                </section>
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    left: auto;
-    min-width: 220px;
-    background-color: white;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    border-radius: 6px;
-    z-index: 1000;
-    padding: 5px 0;
-}
+                <section class="bloque-disciplina" id="baby">
+                    <h2>Baby fútbol</h2>
+                    <div class="nota">
+                        <strong>Participación en el club:</strong> Desde 1975 (51 años de trayectoria) | <strong>Liga:</strong> Federación de Fútbol Infantil y Juvenil de Esteban Echeverría y La Matanza (FEFI) | <strong>Actualidad:</strong> Líderes en la tabla general de categorías 2014 y 2015.
+                    </div>
+                    <p>
+                        El baby fútbol es una modalidad de fútbol orientada
+                        principalmente a los más chicos. Se desarrolla en espacios
+                        de juego reducidos, lo que permite que los participantes
+                        tengan contacto frecuente con la pelota.
+                    </p>
+                    <p>
+                        Es una actividad útil para aprender las reglas básicas,
+                        mejorar la coordinación y desarrollar el compañerismo.
+                    </p>
+                    <p>
+                        Además del aspecto deportivo, busca que los chicos
+                        disfruten del juego y compartan una actividad con
+                        otros compañeros.
+                    </p>
+                </section>
 
-.dropdown:hover > .dropdown-content,
-.dropdown:focus-within > .dropdown-content {
-    display: block;
-}
+                <section class="bloque-disciplina" id="bochas">
+                    <h2>Bochas</h2>
+                    <div class="nota">
+                        <strong>Participación en el club:</strong> Desde 1962 (64 años de trayectoria, una de las disciplinas fundacionales de la Sede) | <strong>Liga:</strong> Asociación de Bochas de La Matanza | <strong>Actualidad:</strong> Campeones vigentes del Torneo Apertura por tríos.
+                    </div>
+                    <p>
+                        Las bochas son un deporte de precisión en el que los
+                        participantes intentan acercar sus bolas lo máximo
+                        posible a una bola objetivo.
+                    </p>
+                    <p>
+                        Para jugar se necesita concentración, coordinación
+                        y control de la fuerza. Cada lanzamiento requiere
+                        observar la posición de las bochas y elegir una estrategia.
+                    </p>
+                    <p>
+                        Es una actividad que puede practicarse de manera recreativa
+                        y competitiva, y que fomenta el encuentro entre los
+                        integrantes de la institución.
+                    </p>
+                </section>
 
-.submenu {
-    position: relative;
-}
+                <section class="bloque-disciplina" id="artes-marciales">
+                    <h2>Artes marciales</h2>
+                    <div class="nota">
+                        <strong>Participación en el club:</strong> Desde 2002 (24 años de trayectoria) | <strong>Liga:</strong> Federación Argentina de Taekwondo y Karate (F.A.T. / F.A.K.) | <strong>Actualidad:</strong> 12 medallas obtenidas en el último Torneo Regional Bonaerense.
+                    </div>
+                    <p>
+                        Las artes marciales reúnen diferentes disciplinas que
+                        combinan técnicas de movimiento, coordinación, equilibrio
+                        y concentración.
+                    </p>
+                    <p>
+                        Las clases pueden incluir ejercicios físicos, aprendizaje
+                        de técnicas y prácticas adaptadas al nivel de cada
+                        participante.
+                    </p>
+                    <p>
+                        Además del entrenamiento físico, estas actividades
+                        promueven la disciplina, el autocontrol y el respeto
+                        hacia los compañeros.
+                    </p>
+                </section>
 
-.dropdown-content a {
-    display: block;
-    color: #333;
-    padding: 12px 16px;
-    text-decoration: none;
-    font-size: 14px;
-    white-space: nowrap;
-}
+            </div>
+        </div>
 
-.dropdown-content a:hover {
-    background-color: #05d66df8;
-    color: #fff;
-    font-weight: bold;
-}
+        <section class="seccion-contenido">
+            <h2 class="subtitulo-seccion">El deporte dentro del club</h2>
+            <div class="panel-info">
+                <p>
+                    Las distintas disciplinas permiten que el club sea un espacio
+                    de encuentro para la comunidad. Cada actividad ofrece una
+                    forma diferente de practicar deporte y compartir experiencias.
+                </p>
+                <p>
+                    La participación deportiva ayuda a desarrollar hábitos
+                    saludables, fortalecer los vínculos sociales y representar
+                    a la institución en distintas actividades.
+                </p>
+                <p>
+                    Para consultar horarios, categorías, inscripciones y novedades,
+                    se pueden revisar los canales oficiales de Deportivo Laferrere.
+                </p>
+                <a class="boton-verde" href="https://linktr.ee/deportivolaferrere" target="_blank" rel="noopener noreferrer">Canales oficiales</a>
+            </div>
+        </section>
 
-.submenu-content {
-    display: none;
-    position: absolute;
-    top: 0;
-    right: 100%;
-    left: auto;
-    min-width: 180px;
-    background-color: white;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    border-radius: 6px;
-    padding: 5px 0;
-    z-index: 1001;
-}
+    </main>
 
-.submenu:hover > .submenu-content,
-.submenu:focus-within > .submenu-content {
-    display: block;
-}
+    <footer class="footer" id="pie">
+        <p class="creditos">
+            Página hecha por Blanco Vicente, Colombo Agustin y Gestro Bruno
+        </p>
 
-.submenu-trigger {
-    cursor: pointer;
-}
+        <div class="sponsors">
+            <img src="imagenes/sponsor1.png" alt="Sponsor 1">
+            <img src="imagenes/sponsor2.png" alt="Sponsor 2">
+            <img src="imagenes/sponsor3.png" alt="Sponsor 3">
+            <img src="imagenes/sponsor4.png" alt="Sponsor 4">
+        </div>
+        <p>© 2026 Club Social y Cultural Deportivo Laferrere. Todos los derechos reservados.</p>
+    </footer>
 
-.menu-icon {
-    width: 40px;
-    height: 40px;
-    object-fit: contain;
-}
-
-.contenedor-principal {
-    margin-top: 40px;
-    margin-bottom: 40px;
-    flex: 1;
-    width: 100%;
-}
-
-.deportes-principal {
-    padding-bottom: 30px;
-}
-
-.portada-deporte {
-    width: 90%;
-    max-width: 1200px;
-    margin: 90px auto 35px;
-    padding: 30px;
-    background-color: white;
-    border: 2px solid #008643;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
-    text-align: center;
-}
-
-.portada-deporte h2 {
-    margin-top: 0;
-    color: #008643;
-    font-size: 30px;
-}
-
-.portada-deporte p {
-    color: #444;
-    font-size: 16px;
-    line-height: 1.7;
-}
-
-.disciplinas-layout {
-    display: grid;
-    grid-template-columns: 220px minmax(0, 1fr);
-    gap: 25px;
-    width: 90%;
-    max-width: 1200px;
-    margin: 35px auto;
-    align-items: start;
-}
-
-.barra-disciplinas {
-    position: sticky;
-    top: 120px;
-    padding: 20px;
-    background-color: white;
-    border: 2px solid #008643;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.barra-disciplinas h3 {
-    margin: 0 0 15px;
-    padding-bottom: 10px;
-    color: #008643;
-    text-align: center;
-    border-bottom: 2px solid #05a653;
-}
-
-.barra-disciplinas a {
-    display: block;
-    margin: 7px 0;
-    padding: 10px;
-    color: #333;
-    background-color: #f2f2f2;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-.barra-disciplinas a:hover {
-    background-color: #008643;
-    color: white;
-}
-
-.contenido-disciplinas {
-    min-width: 0;
-}
-
-.bloque-disciplina {
-    margin-bottom: 25px;
-    padding: 25px;
-    background-color: white;
-    border: 2px solid #008643;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    scroll-margin-top: 120px;
-}
-
-.bloque-disciplina h2 {
-    margin-top: 0;
-    padding-bottom: 10px;
-    color: #008643;
-    text-align: center;
-    border-bottom: 2px solid #05a653;
-}
-
-.bloque-disciplina h3 {
-    margin-top: 20px;
-    color: #008643;
-}
-
-.bloque-disciplina p {
-    color: #444;
-    font-size: 15px;
-    line-height: 1.7;
-}
-
-.bloque-disciplina ul {
-    padding-left: 25px;
-    color: #444;
-    line-height: 1.8;
-}
-
-.seccion-contenido {
-    width: 90%;
-    max-width: 1200px;
-    margin: 35px auto;
-    scroll-margin-top: 115px;
-}
-
-.subtitulo-seccion {
-    margin: 0 0 15px;
-    padding-bottom: 8px;
-    color: #008643;
-    font-size: 24px;
-    text-align: center;
-    border-bottom: 2px solid #05a653;
-}
-
-.panel-info {
-    padding: 25px;
-    background-color: white;
-    border: 2px solid #008643;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    color: #444;
-    line-height: 1.7;
-}
-
-.panel-info p {
-    margin: 10px 0 15px;
-    font-size: 15px;
-}
-
-.nota {
-    margin: 0 0 15px;
-    padding: 15px;
-    background-color: #e8f8ee;
-    border-left: 4px solid #008643;
-    border-radius: 5px;
-    color: #444;
-}
-
-.boton-verde {
-    display: inline-block;
-    margin-top: 12px;
-    padding: 11px 20px;
-    background-color: #008643;
-    color: white !important;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.2s ease, transform 0.2s ease;
-}
-
-.boton-verde:hover {
-    background-color: #05a653;
-    color: white !important;
-    transform: translateY(-2px);
-}
-
-#pantalla-carga {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    z-index: 9999;
-    animation: desaparecer 1s ease forwards;
-    animation-delay: 2s;
-}
-
-#pantalla-carga::before {
-    content: "";
-    position: absolute;
-    width: 150%;
-    height: 150%;
-    top: -25%;
-    left: -25%;
-    background: linear-gradient(120deg, transparent, #008744, #00a653, white, #008744, transparent);
-    opacity: 0.35;
-    transform: rotate(-10deg);
-    animation: cascada 3s linear infinite;
-}
-
-#pantalla-carga::after {
-    content: "";
-    position: absolute;
-    width: 150%;
-    height: 150%;
-    top: -25%;
-    left: -25%;
-    background: linear-gradient(120deg, transparent, #008744, white, #008744, transparent);
-    opacity: 0.2;
-    transform: rotate(-10deg);
-    animation: cascada 3s linear infinite;
-    animation-delay: 1.5s;
-}
-
-.loader-contenido {
-    position: relative;
-    z-index: 2;
-}
-
-.loader-escudo {
-    display: block;
-    width: 170px;
-    max-width: 70vw;
-    height: auto;
-    animation: palpitar 1.5s ease-in-out infinite;
-}
-
-@keyframes cascada {
-    0% { transform: translateY(0%) rotate(-10deg); }
-    100% { transform: translateY(20%) rotate(10deg); }
-}
-
-@keyframes palpitar {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.08); }
-    100% { transform: scale(1); }
-}
-
-@keyframes desaparecer {
-    0% { opacity: 1; visibility: visible; }
-    100% { opacity: 0; visibility: hidden; pointer-events: none; }
-}
-
-.footer {
-    background-color: #008643;
-    color: white;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 20px 20px 15px;
-    margin-top: auto;
-    border-top: 3px solid #05d66df8;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-}
-
-.sponsors {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 50px;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    max-width: 1000px;
-}
-
-.sponsors img {
-    height: 80px;
-    width: 100px;
-    object-fit: contain;
-    border-radius: 5px;
-    display: block;
-}
-
-.footer p {
-    margin: 0;
-    font-size: 10px;
-    line-height: 1.5;
-    text-align: center;
-    width: 100%;
-}
-
-.footer .creditos {
-    font-size: 12px;
-}
-
-@media (max-width: 900px) {
-    .portada-deporte {
-        width: 94%;
-        padding: 22px;
-    }
-    .seccion-contenido {
-        width: 94%;
-    }
-    .disciplinas-layout {
-        width: 94%;
-        grid-template-columns: 190px minmax(0, 1fr);
-        gap: 15px;
-    }
-    .sponsors {
-        gap: 30px;
-    }
-}
-
-@media (max-width: 600px) {
-    .header {
-        padding-left: 8px;
-        padding-right: 8px;
-    }
-    .escudo-contenedor {
-        width: calc(100% - 65px);
-        padding-left: 0;
-        gap: 5px;
-    }
-    .escudo-contenedor img {
-        width: 65px;
-        height: 65px;
-    }
-    .nombreClub {
-        width: auto;
-        max-width: 180px;
-        font-size: 12px;
-    }
-    .menu-container {
-        right: 10px;
-    }
-    .dropbtn {
-        margin-top: 0;
-    }
-    .menu-icon {
-        width: 32px;
-        height: 32px;
-    }
-    .dropdown-content {
-        min-width: 190px;
-    }
-    .submenu-content {
-        min-width: 160px;
-    }
-    .portada-deporte {
-        margin-top: 65px;
-        padding: 18px;
-    }
-    .portada-deporte h2 {
-        font-size: 24px;
-    }
-    .portada-deporte p {
-        font-size: 14px;
-    }
-    .seccion-contenido {
-        width: 94%;
-        margin: 25px auto;
-    }
-    .subtitulo-seccion {
-        font-size: 21px;
-    }
-    .panel-info {
-        padding: 16px;
-    }
-    .panel-info p {
-        font-size: 14px;
-    }
-    .disciplinas-layout {
-        display: flex;
-        flex-direction: column;
-        width: 94%;
-    }
-    .barra-disciplinas {
-        position: static;
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 5px;
-    }
-    .barra-disciplinas h3 {
-        width: 100%;
-    }
-    .barra-disciplinas a {
-        margin: 3px;
-        padding: 9px 12px;
-        font-size: 13px;
-    }
-    .contenido-disciplinas {
-        width: 100%;
-    }
-    .bloque-disciplina {
-        padding: 17px;
-        scroll-margin-top: 60px;
-    }
-    .bloque-disciplina p {
-        font-size: 14px;
-    }
-    .sponsors {
-        gap: 15px;
-    }
-    .sponsors img {
-        width: 70px;
-        height: 55px;
-    }
-}
+</body>
+</html>
